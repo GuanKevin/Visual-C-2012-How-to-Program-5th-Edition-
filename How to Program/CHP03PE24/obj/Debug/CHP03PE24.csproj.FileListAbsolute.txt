@@ -1,0 +1,6 @@
+c:\users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP03PE24\bin\Debug\CHP03PE24.exe.config
+c:\users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP03PE24\bin\Debug\CHP03PE24.exe
+c:\users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP03PE24\bin\Debug\CHP03PE24.pdb
+c:\users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP03PE24\obj\Debug\CHP03PE24.csprojResolveAssemblyReference.cache
+c:\users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP03PE24\obj\Debug\CHP03PE24.exe
+c:\users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP03PE24\obj\Debug\CHP03PE24.pdb

@@ -1,0 +1,6 @@
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP03PE27\bin\Debug\CHP03PE27.exe.config
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP03PE27\bin\Debug\CHP03PE27.exe
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP03PE27\bin\Debug\CHP03PE27.pdb
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP03PE27\obj\Debug\CHP03PE27.csprojResolveAssemblyReference.cache
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP03PE27\obj\Debug\CHP03PE27.exe
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP03PE27\obj\Debug\CHP03PE27.pdb
