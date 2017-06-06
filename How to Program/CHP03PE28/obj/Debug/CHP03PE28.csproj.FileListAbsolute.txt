@@ -3,3 +3,4 @@ C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP03PE28\bi
 C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP03PE28\bin\Debug\CHP03PE28.pdb
 C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP03PE28\obj\Debug\CHP03PE28.exe
 C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP03PE28\obj\Debug\CHP03PE28.pdb
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP03PE28\obj\Debug\CHP03PE28.csprojResolveAssemblyReference.cache
