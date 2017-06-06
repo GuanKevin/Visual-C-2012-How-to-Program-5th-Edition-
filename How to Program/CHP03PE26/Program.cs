@@ -3,7 +3,7 @@
 /**
  * 3.26 (Diameter, Circumference and Area of a Circle) 
  * Write an app that inputs from the user the radius of a circle as an integer and displays the circle’s diameter, 
- * circumference and area using the floating-point value 3.14159 for π. Use the techniques shown in Fig. 3.14. 
+ * circumference and area using the floating-point value 3.14159 for π. 
  * [Note: You may also use the predefined constant Math.PI for the value of π. This constant is more precise than the 
  * value 3.14159. Class Math is defined in namespace System]. Use the following formulas (r is the radius):
  * diameter = 2 * r 
@@ -18,7 +18,12 @@ namespace CHP03PE26
     {
         static void Main(string[] args)
         {
-
+            Console.Write("Enter the radius: ");
+            int radius = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("The radius is {0}.", radius);
+            Console.WriteLine("The diameter is {0}.", (2 * radius));
+            Console.WriteLine("The circumference is {0}.", (2 * Math.PI * radius));
+            Console.WriteLine("The area is {0}.", (Math.PI * Math.Pow(radius, 2)));
         }
     }
 }
