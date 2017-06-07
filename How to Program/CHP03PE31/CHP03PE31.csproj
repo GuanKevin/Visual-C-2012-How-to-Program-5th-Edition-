@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F3B29AA7-85B7-4DFA-938C-2BC45DCE33F9}</ProjectGuid>
+    <ProjectGuid>{D3A37560-BAAB-4053-BFB5-EFD22D4105FF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>CHP04PE31</RootNamespace>
-    <AssemblyName>CHP04PE31</AssemblyName>
+    <RootNamespace>CHP03PE31</RootNamespace>
+    <AssemblyName>CHP03PE31</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

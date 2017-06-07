@@ -1,6 +1,6 @@
 ﻿using System;
 
-/*
+/**
  * 3.28 (Digits of an Integer) 
  * Write an app that inputs one number consisting of five digits from the user, separates the number into its individual 
  * digits and displays the digits separated from one another by three spaces each. For example, if the user types in the 
@@ -18,12 +18,12 @@ namespace CHP03PE28
         {
             Console.Write("Enter a 5 digit number: ");
             int number = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("You've entered {0}.", number);
+            Console.WriteLine("The number you chose is {0}.", number);
 
             if (number / 10000 > 9)
-                Console.WriteLine("{0} is greater than 5 digits!", number);
+                Console.WriteLine("Number has more than 5 digits!");
             else if (number / 10000 == 0)
-                Console.WriteLine("{0} is less than 5 digits!", number);
+                Console.WriteLine("Number has less than 5 digits!");
             else
             {
                 int digit1,
@@ -41,9 +41,10 @@ namespace CHP03PE28
                 digit4 = number / 10;
                 number = number % 10;
                 digit5 = number;
-                String space = "   ";
 
-                Console.WriteLine("{1}{0}{2}{0}{3}{0}{4}{0}{5}", space, digit1, digit2, digit3, digit4, digit5);
+                String space3 = "   ";
+
+                Console.WriteLine("{1}{0}{2}{0}{3}{0}{4}{0}{5}", space3, digit1, digit2, digit3, digit4, digit5);
             }
         }
     }

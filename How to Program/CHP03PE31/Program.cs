@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-/**
+/*
  * 3.31 (Body Mass Index Calculator) 
  * We introduced the body mass index (BMI) calculator in Exercise 1.29. The formulas for calculating the BMI are
  * BMI = (weightInPounds x 703) / (heightInInches x heightInInches)
@@ -19,7 +15,7 @@ using System.Threading.Tasks;
  * Overweight: between 25 and 29.9
  * Obese: 30 or greater
  */
-namespace CHP04PE31
+namespace CHP03PE31
 {
     class Program
     {

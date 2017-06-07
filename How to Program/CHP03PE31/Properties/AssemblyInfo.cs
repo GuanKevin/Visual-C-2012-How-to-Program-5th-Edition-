@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("CHP04PE31")]
+[assembly: AssemblyTitle("CHP03PE31")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("CHP04PE31")]
+[assembly: AssemblyProduct("CHP03PE31")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("f3b29aa7-85b7-4dfa-938c-2bc45dce33f9")]
+[assembly: Guid("d3a37560-baab-4053-bfb5-efd22d4105ff")]
 
 // Version information for an assembly consists of the following four values:
 //

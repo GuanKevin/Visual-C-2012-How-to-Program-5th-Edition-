@@ -1,5 +1,0 @@
-C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP04PE31\bin\Debug\CHP04PE31.exe.config
-C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP04PE31\bin\Debug\CHP04PE31.exe
-C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP04PE31\bin\Debug\CHP04PE31.pdb
-C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP04PE31\obj\Debug\CHP04PE31.exe
-C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP04PE31\obj\Debug\CHP04PE31.pdb
