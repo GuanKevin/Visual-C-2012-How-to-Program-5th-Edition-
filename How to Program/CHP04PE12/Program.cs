@@ -18,7 +18,12 @@ namespace CHP04PE12
     {
         static void Main(string[] args)
         {
-               
+            Invoice myOrder = new Invoice();
+            Console.WriteLine(myOrder.PartNumber + "\n" + myOrder.PartDesc);
+            myOrder.PricePerItem = -500;
+            Console.WriteLine("The total cost is {0:C}.", myOrder.GetInvoiceAmount());
+
+
         }
     }
 }

@@ -3,8 +3,8 @@
 /**
  * 4.16 (Computerization of Health Records) 
  * A health care issue that has been in the news lately is the computerization of health records. This possibility is 
- * being approached cautiously because of sensitive privacy and security concerns, among others. [We address such 
- * concerns in later exercises.] Computerizing health records could make it easier for patients to share their 
+ * being approached cautiously because of sensitive privacy and security concerns, among others. 
+ * Computerizing health records could make it easier for patients to share their 
  * health profiles and histories among their various health care professionals. This could improve the quality of 
  * health care, help avoid drug conflicts and erroneous drug prescriptions, reduce costs and, in emergencies, could 
  * save lives. In this exercise, you’ll design a “starter” HealthProfile class for a person. The class attributes 
@@ -24,6 +24,12 @@ namespace CHP04PE16
     {
         static void Main(string[] args)
         {
+            HealthProfile myProfile = new HealthProfile();
+            Console.WriteLine("Name: {0}, {1}" +
+                "\nGender: {2}" +
+                "\nBMI: {3}" +
+                "\nMax HR: {4}", 
+                myProfile.LastName, myProfile.FirtName, myProfile.Gender, myProfile.GetBMI(), myProfile.MaximumHeartRate());
         }
     }
 }

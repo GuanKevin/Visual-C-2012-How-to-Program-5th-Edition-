@@ -14,6 +14,12 @@ namespace CHP04PE10
     {
         static void Main(string[] args)
         {
+            GradeBook myGradeBook = new GradeBook();
+            GradeBook myGradeBook2 = new GradeBook("Introduction to Java Programming", "Kevin G");
+            myGradeBook2.InstructorName = "Mozilla F. Fox";
+            myGradeBook2.CourseName = "Learn Rust Programming";
+
+            myGradeBook2.DisplayMessage();
         }
     }
 }

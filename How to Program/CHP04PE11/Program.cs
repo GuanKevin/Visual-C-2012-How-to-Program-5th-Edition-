@@ -4,8 +4,7 @@
  * 4.11 (Account Modification) 
  * Modify class Account (Fig. 4.15) to provide a method called Debit that withdraws money from an Account. 
  * Ensure that the debit amount doesn’t exceed the balance. If it does, the balance should not be changed 
- * and the method should display amessage indicating "Debit amount exceeded account balance." Modify class 
- * AccountTest (Fig. 4.16) to test method Debit.
+ * and the method should display a message indicating "Debit amount exceeded account balance." 
  */
 namespace CHP04PE11
 {
@@ -13,6 +12,9 @@ namespace CHP04PE11
     {
         static void Main(string[] args)
         {
+            Account myAccount = new Account(500);
+            myAccount.Debit(501);        
+            Console.WriteLine("My default balance is {0:C}!", myAccount.Balance);
         }
     }
 }

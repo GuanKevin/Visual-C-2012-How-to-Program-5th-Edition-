@@ -1,0 +1,6 @@
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP05PE41\bin\Debug\CHP05PE41.exe.config
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP05PE41\bin\Debug\CHP05PE41.exe
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP05PE41\bin\Debug\CHP05PE41.pdb
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP05PE41\obj\Debug\CHP05PE41.csprojResolveAssemblyReference.cache
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP05PE41\obj\Debug\CHP05PE41.exe
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP05PE41\obj\Debug\CHP05PE41.pdb

@@ -16,6 +16,19 @@ namespace CHP04PE13
     {
         static void Main(string[] args)
         {
+            Employee me = new Employee();
+            Console.WriteLine("Employee Name: {0}, {1}", me.LastName, me.FirstName);
+            Console.WriteLine("Monthly Salary is: {0:C}.", me.MonthlySalary);
+            Console.WriteLine("Yearly Salary is: {0:C}.", me.YearlySalary());
+            me.GiveRaise();
+            Console.WriteLine("Yearly Salary after the raise is: {0:C}.\n", me.YearlySalary());
+
+            Employee emp2 = new Employee("Michael", "G", 2500.00M);
+            Console.WriteLine("Employee Name: {0}, {1}", emp2.LastName, emp2.FirstName);
+            Console.WriteLine("Monthly Salary is: {0:C}.", emp2.MonthlySalary);
+            Console.WriteLine("Yearly Salary is: {0:C}.", emp2.YearlySalary());
+            emp2.GiveRaise();
+            Console.WriteLine("Yearly Salary after the raise is: {0:C}.", emp2.YearlySalary());
         }
     }
 }

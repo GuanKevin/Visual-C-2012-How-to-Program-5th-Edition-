@@ -3,12 +3,9 @@
 /**
  * 4.15 (Target-Heart-Rate Calculator) 
  * While exercising, you can use a heart-rate monitor to see that your heart rate stays within a safe range 
- * suggested by your trainers and doctors. According to the American Heart Association (AHA) 
- * (www.heart.org/HEARTORG/GettingHealthy/PhysicalActivity/Target-Heart-Rates_UCM_434341_Article.jsp), 
+ * suggested by your trainers and doctors. According to the American Heart Association (AHA),
  * the formula for calculating your maximum heart rate in beats per minute is 220 minus your age in years. 
- * Your target heart rate is a range that is 50–85% of your maximum heart rate. [Note: These formulas are estimates 
- * provided by the AHA. Maximum and target heart rates may vary based on the health, fitness and gender of the individual. 
- * Always consult a physician or qualified health care professional before beginning or modifying an exercise program.]
+ * Your target heart rate is a range that is 50–85% of your maximum heart rate.
  * Create a class called HeartRates. The class attributes should include the person’s first name, last name, year 
  * of birth and the current year. Your class should have a constructor that receives this data as parameters. 
  * For each attribute provide a property with set and get accessors. The class also should include a property 
@@ -24,6 +21,9 @@ namespace CHP04PE15
     {
         static void Main(string[] args)
         {
+            HeartRates me = new HeartRates();
+            Console.WriteLine("Mininum heart rate during exercise should be {0}.", me.MinimumHeartRate());
+            Console.WriteLine("Maximum heart rate during exercise should be {0}.", me.MaximumHeartRate());
         }
-    }
+    }   
 }
