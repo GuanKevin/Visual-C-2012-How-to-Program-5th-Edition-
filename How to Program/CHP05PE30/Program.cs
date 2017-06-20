@@ -15,41 +15,34 @@ namespace CHP05PE30
         static void Main(string[] args)
         {
             int palindrome;
-            Boolean isFiveDigit = false;
-            String digit;
 
-            while (!isFiveDigit)
+            Console.Write("Enter a 5 digit integer: ");
+            palindrome = Convert.ToInt32(Console.ReadLine());
+
+            while ((palindrome / 10000) == 0 || (palindrome / 10000) > 9)
             {
-                Console.Write("Enter a 5 digit integer: ");
-                digit = Convert.ToString(Console.ReadLine());
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write("ERROR, INPUT IS NOT 5 DIGITS!" +
+                    "\n!Enter a 5 digit integer: ");
+                palindrome = Convert.ToInt32(Console.ReadLine());
+                Console.ResetColor();
+            }
 
-                if (digit.Length == 5)
+            if ((palindrome / 10000) == (palindrome % 10))
+            {
+                if ((((palindrome - ((palindrome / 10000) * 10000))) / 1000) == (((palindrome - (palindrome % 10)) % 100) / 10))
                 {
-                    palindrome = Convert.ToInt32(digit);
-                    isFiveDigit = true;
-
-
-                    if (palindrome / 10000 == palindrome % 10)
-                    {
-                        palindrome -= ((palindrome / 10000) * 10000);
-                        palindrome -= (palindrome % 10);
-                        palindrome /= 10;
-
-                        if (palindrome / 100 == palindrome % 10)
-                            Console.WriteLine("{0} is a palindrome.", digit);
-                        else
-                            Console.WriteLine("{0} is not a palindrome.", digit);
-                    }
-                    else
-                        Console.WriteLine("{0} is not a palindrome.", digit);
+                    Console.WriteLine("{0} is a palindrome!", palindrome);
                 }
                 else
                 {
-                    Console.ForegroundColor = ConsoleColor.Red;
-                    Console.WriteLine("ERROR: DIGIT ENTERED IS NOT 5 DIGIT!");
-                    Console.ResetColor();
+                    Console.WriteLine("{0} is not a palindrome!", palindrome);
                 }
-            }       
+            }
+            else
+            {
+                Console.WriteLine("{0} is not a palindrome!", palindrome);
+            }
         }
     }
 }

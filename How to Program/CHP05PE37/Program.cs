@@ -13,18 +13,16 @@ namespace CHP05PE37
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter a non negative number: ");
+            Console.Write("Enter a number: ");
             int factorial = Convert.ToInt32(Console.ReadLine());
             int sum = 1;
 
-            Console.Write("The factorial of {0} ", factorial);
-            while (factorial != 1)
+            while (factorial > 0)
             {
                 sum *= factorial--;
-
-                if (factorial == 1)
-                    Console.WriteLine("is {0}.", sum);
             }
+
+            Console.WriteLine("The factorial is {0}.", sum);
         }
     }
 }

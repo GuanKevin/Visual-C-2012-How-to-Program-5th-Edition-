@@ -1,0 +1,5 @@
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP07PE29\bin\Debug\CHP07PE29.exe.config
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP07PE29\bin\Debug\CHP07PE29.exe
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP07PE29\bin\Debug\CHP07PE29.pdb
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP07PE29\obj\Debug\CHP07PE29.exe
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP07PE29\obj\Debug\CHP07PE29.pdb

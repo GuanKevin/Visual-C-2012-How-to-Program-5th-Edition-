@@ -14,14 +14,12 @@ namespace CHP05PE20
     {
         static void Main(string[] args)
         {
-            Employee 
-                emp1 = new Employee(),
-                emp2 = new Employee(45, 27),
-                emp3 = new Employee(60, 15);
+            Employee kevinG = new Employee();
+            Console.WriteLine(kevinG.CalculatePay());
 
-            Console.WriteLine("The salary of Employee 1 is {0:C}.", emp1.EmployeeSalary());
-            Console.WriteLine("The salary of Employee 2 is {0:C}.", emp2.EmployeeSalary());
-            Console.WriteLine("The salary of Employee 3 is {0:C}.", emp3.EmployeeSalary());
+            kevinG.HoursWorked = 45;
+            kevinG.HourlyRate = 11;
+            Console.WriteLine(kevinG.CalculatePay());
         }
     }
 }

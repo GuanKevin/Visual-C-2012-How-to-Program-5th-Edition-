@@ -15,7 +15,7 @@ namespace CHP05PE25
             {
                 Console.WriteLine(count % 2 == 1 ? "****" : "++++++++");
                 ++count;
-            } // end while
+            } 
         }
     }
 }

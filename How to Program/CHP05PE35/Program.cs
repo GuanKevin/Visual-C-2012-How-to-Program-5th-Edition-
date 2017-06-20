@@ -11,33 +11,23 @@ namespace CHP05PE35
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter 3 nonzero values: ");
-            int side1 = Convert.ToInt32(Console.ReadLine()),
-                side2 = Convert.ToInt32(Console.ReadLine()),
-                side3 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter side A: ");
+            int sideA = Convert.ToInt16(Console.ReadLine());
+            Console.Write("Enter side B: ");
+            int sideB = Convert.ToInt16(Console.ReadLine());
+            Console.Write("Enter side C: ");
+            int sideC = Convert.ToInt16(Console.ReadLine());
 
-            if ((side1 + side2) > side3)
-            {
-                if ((side1 + side3) > side2)
-                {
-                    if ((side2 + side3) > side1)
-                    {
-                        Console.WriteLine("The sides are valid!");
-                    }
+            if ((sideA + sideB) > sideC)            
+                if ((sideA + sideC) > sideB)                
+                    if ((sideB + sideC) > sideA)
+                        Console.WriteLine("This is a valid triangle!");
                     else
-                    {
-                        Console.WriteLine("The sides are not valid!");
-                    }
-                }
+                        Console.WriteLine("This is an invalid triangle!");                
                 else
-                {
-                    Console.WriteLine("The sides are not valid!");
-                }
-            }
+                    Console.WriteLine("This is an invalid triangle!");            
             else
-            {
-                Console.WriteLine("The sides are not valid!");
-            }
+                Console.WriteLine("This is an invalid triangle!");
         }
     }
 }

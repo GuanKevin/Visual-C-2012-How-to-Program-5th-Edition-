@@ -16,11 +16,13 @@ namespace CHP05PE22
     {
         static void Main(string[] args)
         {
+            int counter = 0;
             Console.WriteLine("N\t10*N\t100*N\t1000*N");
 
-            int counter = 0;
             while (counter++ < 5)
+            {
                 Console.WriteLine("{0}\t{1}\t{2}\t{3}", (counter), (counter * 10), (counter * 100), (counter * 1000));
+            }
         }
     }
 }

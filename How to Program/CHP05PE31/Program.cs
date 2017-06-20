@@ -17,21 +17,18 @@ namespace CHP05PE31
         static void Main(string[] args)
         {
             Console.Write("Enter a binary number: ");
-            int binary = Convert.ToInt32(Console.ReadLine());
-            int value = 1;
-            int decimalFromBinary = 0;
+            int binary = Convert.ToInt32(Console.ReadLine()),
+                value = 1,
+                decimalValue = 0;
 
-            Console.Write("The binary of {0}", binary);
             while (binary != 0)
             {
-                decimalFromBinary += ((binary % 10) * value);
+                decimalValue += (binary % 10) * value;
                 value *= 2;
-                binary -= (binary % 10);
-                binary /= 10;
-
-                if (binary == 0)
-                    Console.WriteLine(" is {0}.",  decimalFromBinary);
+                binary = (binary - (binary % 10)) / 10;
             }
+
+            Console.WriteLine("The decimal value is {0}.", decimalValue);
         }
     }
 }

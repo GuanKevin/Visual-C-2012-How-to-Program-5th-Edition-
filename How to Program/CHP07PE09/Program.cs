@@ -13,6 +13,14 @@ namespace CHP07PE09
     {
         static void Main(string[] args)
         {
+            Console.Write("Enter a number to be rounded: ");
+            FloorMe(Convert.ToDouble(Console.ReadLine()));
+        }
+
+        public static void FloorMe(double number)
+        {
+            Console.WriteLine("The original number is: {0}.", number);
+            Console.WriteLine("The number after it got floored: {0}.", Math.Floor(number));
         }
     }
 }

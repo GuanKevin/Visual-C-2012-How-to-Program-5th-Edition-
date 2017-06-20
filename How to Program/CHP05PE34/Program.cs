@@ -2,7 +2,8 @@
 
 /**
  * 5.34 (What’s Wrong with This Code?) 
- * What is wrong with the following statement? Provide the correct statement to add 1 to the sum of x and y.
+ * What is wrong with the following statement? 
+ * Provide the correct statement to add 1 to the sum of x and y.
  */ 
 namespace CHP05PE34
 {
@@ -10,7 +11,12 @@ namespace CHP05PE34
     {
         static void Main(string[] args)
         {
-            // Console.WriteLine( ++(x + y) );
+            int x = 5,
+                y = 3,
+                sum = (x + y);
+
+            Console.WriteLine( ++sum );
+
         }
     }
 }

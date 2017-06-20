@@ -15,6 +15,19 @@ namespace CHP07PE25
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Prime Numbers");
+            for (int i = 2; i < 100; i++)
+                if (IsPrime(i))
+                    Console.WriteLine(i);
+        }
+
+        public static Boolean IsPrime(int number)
+        {
+            for (int i = 2; i <= Math.Sqrt(number); i++)
+                if ((number % i) == 0)
+                    return false;
+
+            return true;
         }
     }
 }

@@ -16,14 +16,24 @@ namespace CHP05PE24
             int studentCounter = 1;
             int result;
 
-            while (studentCounter <= 10)
+            while (studentCounter++ <= 10)
             {
-                Console.Write("Enter result (1 = pass, 2 = fail: ");
+                Console.Write("Enter result (1 = pass, 2 = fail): ");
                 result = Convert.ToInt32(Console.ReadLine());
+
+                if (result != 1 || result != 2)
+                {
+                    while (result != 1 && result != 2)
+                    {
+                        Console.WriteLine("Invalid input");
+                        Console.Write("Enter result (1 = pass, 2 = fail): ");
+                        result = Convert.ToInt32(Console.ReadLine());
+                    }
+                }
 
                 if (result == 1)
                     passes = passes + 1;
-                else 
+                else if (result == 2)
                     failures = failures + 1;
             }
 

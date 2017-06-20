@@ -12,6 +12,21 @@ namespace CHP07PE23
     {
         static void Main(string[] args)
         {
+            Console.Write("Enter floating point number 1: ");
+            float num1 = (float) Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter floating point number 2: ");
+            float num2 = (float)Convert.ToDouble(Console.ReadLine());
+            Console.Write("Enter floating point number 3: ");
+            float num3 = (float)Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("The smallest amongst {0}, {1}, and {2} is {3}.", num1, num2, num3, Minimum3(num1, num2, num3));
+        }
+
+        public static float Minimum3(float num1, float num2, float num3)
+        {
+            num1 = Math.Min(num1, num2);
+
+            return Math.Min(num1, num3);
         }
     }
 }

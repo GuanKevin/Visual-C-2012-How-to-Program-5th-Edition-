@@ -17,6 +17,33 @@ namespace CHP07PE21
     {
         static void Main(string[] args)
         {
+            Console.Write("Enter a number: ");
+            int number = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Turning {0} to: {1}", number, DisplayDigits(number));
+        }
+
+        public static String DisplayDigits(int number)
+        {
+            String digits = "";
+
+            while (number > 0)
+            {
+                digits = (FindRemainder(number, 10) + " " + digits);
+                number = FindQuotient(number, 10);
+            }
+
+            return digits;
+        }
+
+        public static int FindRemainder(int number1, int number2)
+        {
+            return (number1 % number2);
+        }
+
+        public static int FindQuotient(int number1, int number2)
+        {
+            return (number1 / number2);
         }
     }
 }

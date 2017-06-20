@@ -13,6 +13,39 @@ namespace CHP07PE29
     {
         static void Main(string[] args)
         {
+            Console.Write("Enter 1 to flip the coin, 0 to stop: " + 
+                "\nEnter 0 or 1: ");
+            int coin = Convert.ToInt32(Console.ReadLine());
+            int flipCounter = 0;
+            int headCounter = 0;
+
+            while (coin == 1)
+            {
+                flipCounter++;
+                if (FlipCoin())
+                {
+                    headCounter++;
+                    Console.WriteLine("Flipped a head!");
+                }
+                else
+                    Console.WriteLine("Flipped a tail!");
+
+                Console.Write("Enter 0 or 1: ");
+                coin = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("Heads: {0}", headCounter);
+            Console.WriteLine("Tails: {0}", (flipCounter - headCounter));
+        }
+
+        public static Boolean FlipCoin()
+        {
+            Random randomNumber = new Random();
+
+            if (randomNumber.Next(1, 3) == 1)
+                return true;
+            else
+                return false;
         }
     }
 }

@@ -1,0 +1,6 @@
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP07PE08\bin\Debug\CHP07PE08.exe.config
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP07PE08\bin\Debug\CHP07PE08.exe
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP07PE08\bin\Debug\CHP07PE08.pdb
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP07PE08\obj\Debug\CHP07PE08.csprojResolveAssemblyReference.cache
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP07PE08\obj\Debug\CHP07PE08.exe
+C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP07PE08\obj\Debug\CHP07PE08.pdb

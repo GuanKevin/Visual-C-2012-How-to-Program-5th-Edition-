@@ -14,6 +14,22 @@ namespace CHP07PE14
     {
         static void Main(string[] args)
         {
+            Console.Write("Enter the base: ");
+            int value = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the exponent: ");
+            int exponent = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("The exponentiation is: {0}.", IntegerPower(value, exponent));
+        }
+
+        public static int IntegerPower(int value, int exponent)
+        {
+            int sum = 1;
+
+            for (int i = 0; i < exponent; i++)
+                sum *= value;
+
+            return sum;
         }
     }
 }

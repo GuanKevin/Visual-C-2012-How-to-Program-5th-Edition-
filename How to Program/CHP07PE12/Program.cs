@@ -17,6 +17,12 @@ namespace CHP07PE12
     {
         static void Main(string[] args)
         {
+            Random rnd = new Random();
+            for (int i = 0; i < 100; i++)
+                if ((i + 1) % 10 == 0)
+                    Console.WriteLine("{0}\t", rnd.Next(-3, 11));            
+                else
+                    Console.Write("{0}\t", rnd.Next(-3, 11));
         }
     }
 }

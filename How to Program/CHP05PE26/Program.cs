@@ -19,7 +19,7 @@ namespace CHP05PE26
 
                 while (column <= 10)
                 {
-                    Console.Write(row % 2 == 1 ? "<" : ">");
+                    Console.Write(row % 2 == 1 ? "<" : ">");  
                     ++column;
                 }
 

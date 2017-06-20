@@ -11,30 +11,31 @@ namespace CHP05PE23
     {
         static void Main(string[] args)
         {
-            int counter = 0;
-            int number = int.MinValue;
-            int largest = int.MinValue;
-            int secondlargest = int.MinValue;
+            int counter = 0,
+                number,
+                largest = int.MinValue,
+                secondLargest = int.MinValue;
 
             while (counter++ < 10)
             {
                 Console.Write("Enter number {0}: ", counter);
                 number = Convert.ToInt32(Console.ReadLine());
 
-                if (number > secondlargest)
+                if (number > secondLargest)
                 {
-                    secondlargest = number;
+                    secondLargest = number;
 
-                    if (secondlargest > largest)
+                    if (secondLargest > largest)
                     {
-                        number = largest;
-                        largest = secondlargest;
-                        secondlargest = number;
+                        int tempNumber = largest;
+                        largest = secondLargest;
+                        secondLargest = tempNumber;
                     }
-                }                    
+                }
             }
 
-            Console.WriteLine("The largest number is {0} and the second largest is {1}.", largest, number);
+            Console.WriteLine("The largest number is: {0}." +
+                "\nThe second largest number is: {1}.", largest, secondLargest);
         }
     }
 }

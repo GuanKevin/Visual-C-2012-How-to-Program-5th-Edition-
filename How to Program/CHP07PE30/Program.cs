@@ -16,7 +16,26 @@ namespace CHP07PE30
     {
         static void Main(string[] args)
         {
+            GuessTheNumber();
+        }
 
+        public static void GuessTheNumber()
+        {
+            Random randomNumber = new Random();
+            int number = randomNumber.Next(1, 1001);
+            int guessCounter = 0;
+
+            Console.Write("Enter your guess: ");
+            int userGuess = Convert.ToInt32(Console.ReadLine());
+
+            while (number != userGuess)
+            {
+                guessCounter++;
+                Console.Write("Try a {0} number: ", (number > userGuess) ? "larger" : "smaller");                
+                userGuess = Convert.ToInt32(Console.ReadLine());
+            }
+
+            Console.WriteLine("You've got it in {0} tries!", guessCounter);
         }
     }
 }

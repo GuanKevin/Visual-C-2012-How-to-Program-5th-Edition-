@@ -17,11 +17,11 @@ namespace CHP05PE21
     {
         static void Main(string[] args)
         {
-            int counter = 0;
-            int number;
-            int largest = int.MinValue;
-            
-            while (counter++ != 10)
+            int counter = 0,
+                number,
+                largest = int.MinValue;
+
+            while (++counter <= 10)
             {
                 Console.Write("Enter number {0}: ", counter);
                 number = Convert.ToInt32(Console.ReadLine());
@@ -30,7 +30,7 @@ namespace CHP05PE21
                     largest = number;
             }
 
-            Console.WriteLine("The largest number entered was {0}.", largest);
+            Console.WriteLine("The largest value amongst the 10 numbers is: {0}.", largest);
         }
     }
 }

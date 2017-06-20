@@ -23,8 +23,38 @@ namespace CHP07PE40
 {
     class Program
     {
+        Random randNumber = new Random();
+
         static void Main(string[] args)
         {
+            LearnMiltiplication();
+        }
+
+        public static void LearnMiltiplication()
+        {
+            Program instance = new Program();
+            int number1 = instance.GetRandomNumber();
+            int number2 = instance.GetRandomNumber();
+
+            Console.Write("{0} x {1} = ", number1, number2);
+            int product = Convert.ToInt32(Console.ReadLine());
+
+            while (true)
+            {
+                if (product != (number1 * number2))
+                {
+                    Console.WriteLine("No. Please try again.");
+                    Console.Write("{0} x {1} = ", number1, number2);
+                    product = Convert.ToInt32(Console.ReadLine());
+                }
+                else
+                    break;
+            }
+        }
+
+        public int GetRandomNumber()
+        {
+            return randNumber.Next(1, 10);
         }
     }
 }

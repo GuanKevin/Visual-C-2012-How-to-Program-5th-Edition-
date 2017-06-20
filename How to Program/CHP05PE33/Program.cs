@@ -11,13 +11,15 @@ namespace CHP05PE33
     {
         static void Main(string[] args)
         {
-            int multipleOfTwo = 2;
-            int counter = 40;
+            int counter = 1;
+            double product = 1;
 
-            while (counter-- != 0)
+            Console.WriteLine("Number\t\t\tPower");
+
+            while (counter <= 40)
             {
-                Console.WriteLine(multipleOfTwo);
-                multipleOfTwo *= 2;
+                product *= 2;
+                Console.WriteLine("{0}{1,20}", counter++, product);
             }
         }
     }

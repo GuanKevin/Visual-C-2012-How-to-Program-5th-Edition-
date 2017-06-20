@@ -21,6 +21,27 @@ namespace CHP07PE10
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(RoundToThousandths(54.1567));
+        }
+
+        public static double RoundToThousandths(double number)
+        {
+            return Math.Floor(number * 1000 + 0.5) / 1000;
+        }
+
+        public static double RoundToHundredths(double number)
+        {
+            return Math.Floor(number * 100 + 0.5) / 100;
+        }
+
+        public static double RoundToTenths(double number)
+        {
+            return Math.Floor(number * 10 + 0.5) / 10;
+        }
+
+        public static int RoundToInteger(double number)
+        {
+            return (int) number;
         }
     }
 }

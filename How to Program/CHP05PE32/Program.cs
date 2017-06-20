@@ -15,18 +15,18 @@ namespace CHP05PE32
     {
         static void Main(string[] args)
         {
-            int counter = 8;
-            
-            while (counter-- != 0)
+            int outerCounter = 0;
+
+            while (outerCounter++ < 8)
             {
-                int counter2 = 8;
-                if (counter % 2 == 0)
+                int innerCounter = 0;
+
+                if (outerCounter % 2 == 0)
                     Console.Write(" ");
 
-                while (counter2-- != 0)
-                {
+                while (innerCounter++ < 8)
                     Console.Write("* ");
-                }
+
                 Console.WriteLine();
             }
         }

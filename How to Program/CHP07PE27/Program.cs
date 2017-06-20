@@ -12,6 +12,23 @@ namespace CHP07PE27
     {
         static void Main(string[] args)
         {
+            Console.Write("Enter number one: ");
+            int number1 = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter number two: ");
+            int number2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("The GCD of {0} and {1} is {2}.", number1, number2, GCD(number1, number2));
+        }
+
+        public static int GCD(int number1, int number2)
+        {
+            int min = Math.Min(number1, number2);
+
+            for (int i = min; i >= 1; i--)
+                if (((number1 % i) == 0) && ((number2 % i) == 0))
+                    return i;
+
+            return 1;
         }
     }
 }

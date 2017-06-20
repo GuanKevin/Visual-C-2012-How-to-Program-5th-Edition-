@@ -16,6 +16,38 @@ namespace CHP07PE22
     {
         static void Main(string[] args)
         {
+            Console.Write("Enter C to calculate for celcius." +
+                "\nEnter F to calculate for fahrenheit." +
+                "\nCalculate for: ");
+            char conversion = char.ToLower(Convert.ToChar(Console.Read()));
+            Console.ReadLine();
+
+            if (conversion == 'c')
+            {
+                Console.Write("Enter the temperature: ");
+                double temperature = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("{0} in celcius to fahrenheit is {1:N2}.", temperature, CelsiusToFahrenheit(temperature));
+            }
+            else if (conversion == 'f')
+            {
+                Console.Write("Enter the temperature: ");
+                double temperature = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("{0} in fahrenheit to celcius is {1:N2}.", temperature, FahrenheitToCelcius(temperature));
+            }
+            else
+            {
+                Console.WriteLine("Invalid character entered!");
+            }
+        }
+
+        public static double CelsiusToFahrenheit(double celcius)
+        {
+            return 9.0 / 5.0 * celcius + 32;
+        }
+
+        public static double FahrenheitToCelcius(double fahrenheit)
+        {
+            return 5.0 / 9.0 * (fahrenheit - 32);
         }
     }
 }

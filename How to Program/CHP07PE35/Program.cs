@@ -14,6 +14,20 @@ namespace CHP07PE35
     {
         static void Main(string[] args)
         {
+            Console.Write("Enter the base number: ");
+            int baseNumber = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the power: ");
+            int power = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("{0} to the power of {1} is {2}.", baseNumber, power, Power(baseNumber, power));
+        }
+
+        public static double Power(int baseNumber, int exponent)
+        {
+            if (exponent == 1)
+                return baseNumber;
+
+            return baseNumber * Power(baseNumber, --exponent);
         }
     }
 }

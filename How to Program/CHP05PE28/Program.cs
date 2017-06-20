@@ -13,14 +13,23 @@ namespace CHP05PE28
     {
         static void Main(string[] args)
         {
-            /*
-                if ( y == 8 )
-                if ( x == 5 )
-                Console.WriteLine( "@@@@@" );
-                else
-                Console.WriteLine( "#####" );
-                Console.WriteLine( "$$$$$" );
-                Console.WriteLine( "&&&&&" );
+            int y = 7,
+                x = 5;
+
+            if (y == 8)
+            {
+                if (x == 5)
+                    Console.WriteLine("@@@@@");
+            }
+            else
+            {
+                Console.WriteLine("#####");
+                Console.WriteLine("$$$$$");
+                Console.WriteLine("&&&&&");
+            }
+           
+                
+            /*               
                 a) Assuming that x = 5 and y = 8, the following output is produced:
                 @@@@@
                 $$$$$

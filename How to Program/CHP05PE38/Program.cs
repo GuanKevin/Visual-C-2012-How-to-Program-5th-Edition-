@@ -15,24 +15,27 @@ namespace CHP05PE38
             Console.Write("Enter a number: ");
             int number = Convert.ToInt32(Console.ReadLine());
             double e = 1;
-            int counter = 1;
-            
-            while (counter != number)
-            {
-                int counter2 = counter++;
-                int sum = 1;
-                while(counter2 != 0)
-                {
-                    sum *= counter2--;
-                    if (counter2 == 0)
-                        e += (1.0 / sum);
-                }
+            int numCounter = 0;
 
-                if (counter == number)
-                    Console.WriteLine("My approximation of E is {0}.", e);
+            while (numCounter < number)
+            {
+                e += (1.0 / Factorial(++numCounter));
             }
 
-            Console.WriteLine("Math.E approximation is {0}.", Math.E);
+            Console.WriteLine("My way: {0}.", e);
+            Console.WriteLine("Built in: {0}.", Math.E);
+        }
+
+        public static double Factorial(int number)
+        {
+            int sum = 1;
+
+            while (number > 0)
+            {
+                sum *= number--;
+            }
+
+            return sum;
         }
     }
 }

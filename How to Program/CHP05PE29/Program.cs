@@ -12,16 +12,20 @@ namespace CHP05PE29
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter the size of the side of a square: ");
-            int size = Convert.ToInt32(Console.ReadLine());
+            Console.Write("Enter the size of the square: ");
+            int square = Convert.ToInt32(Console.ReadLine());
+
+            if (square < 1 || square > 20)
+                square = 20;
+
             int counter = 0;
-
-            while (counter++ < size)
+            while (counter++ < square)
             {
-                int counter2 = 0;
-
-                while (counter2++ < size)
+                int innerCounter = 0;
+                while (innerCounter++ < square)
+                {
                     Console.Write("* ");
+                }
                 Console.WriteLine();
             }
         }
