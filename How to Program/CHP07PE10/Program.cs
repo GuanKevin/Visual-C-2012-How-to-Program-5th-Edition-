@@ -21,17 +21,15 @@ namespace CHP07PE10
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(RoundToThousandths(54.1567));
+            Console.WriteLine("Rounding to a whole number: {0}.", RoundToInteger(10.12345));
+            Console.WriteLine("Rounding to a whole number: {0}.", RoundToTenths(10.12345));
+            Console.WriteLine("Rounding to a whole number: {0}.", RoundToHundredths(10.12345));
+            Console.WriteLine("Rounding to a whole number: {0}.", RoundToThousandths(10.12345));
         }
 
-        public static double RoundToThousandths(double number)
+        public static int RoundToInteger(double number)
         {
-            return Math.Floor(number * 1000 + 0.5) / 1000;
-        }
-
-        public static double RoundToHundredths(double number)
-        {
-            return Math.Floor(number * 100 + 0.5) / 100;
+            return (int) Math.Floor(number * 10 + 0.5) / 10;
         }
 
         public static double RoundToTenths(double number)
@@ -39,9 +37,14 @@ namespace CHP07PE10
             return Math.Floor(number * 10 + 0.5) / 10;
         }
 
-        public static int RoundToInteger(double number)
+        public static double RoundToHundredths(double number)
         {
-            return (int) number;
+            return Math.Floor(number * 100 + 0.5) / 100;
+        }
+
+        public static double RoundToThousandths(double number)
+        {
+            return Math.Floor(number * 1000 + 0.5) / 1000;
         }
     }
 }

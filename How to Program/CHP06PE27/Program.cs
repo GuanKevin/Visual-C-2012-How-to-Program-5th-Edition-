@@ -13,9 +13,8 @@ namespace CHP06PE27
         {
             for (int count = 1; count <= 10; ++count)
             {
-                if (count == 5)
-                    continue;
-                Console.Write("{0} ", count);
+                if (count != 5)
+                    Console.Write("{0} ", count);
             }
 
             Console.WriteLine("\nUsed continue to skip display 5");

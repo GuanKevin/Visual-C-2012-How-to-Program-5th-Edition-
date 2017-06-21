@@ -43,12 +43,67 @@ namespace CHP07PE40
             {
                 if (product != (number1 * number2))
                 {
-                    Console.WriteLine("No. Please try again.");
+                    instance.GetIncorrectResponse();
                     Console.Write("{0} x {1} = ", number1, number2);
                     product = Convert.ToInt32(Console.ReadLine());
                 }
                 else
+                {
+                    instance.GetCorrectResponse();
                     break;
+                }
+            }
+        }
+
+        public void GetCorrectResponse()
+        {
+            switch (randNumber.Next(4))
+            {
+                case 0:
+                    Console.WriteLine("Very good!");
+                    break;
+                case 1:
+                    Console.WriteLine("Excellent!");
+                    break;
+                case 2:
+                    Console.WriteLine("Nice work!");
+                    break;
+                case 3:
+                    Console.WriteLine("Keep up the good work!");
+                    break;
+                case 4:
+                    Console.WriteLine("Don't give up.");
+                    break;
+                default:
+                    Console.WriteLine("No. Keep trying.");
+                    break;
+
+            }
+        }
+
+        public void GetIncorrectResponse()
+        {
+            switch (randNumber.Next(6))
+            {
+                case 0:
+                    Console.WriteLine("No.");
+                    break;
+                case 1:
+                    Console.WriteLine("Please try again.");
+                    break;
+                case 2:
+                    Console.WriteLine("Wrong.");
+                    break;
+                case 3:
+                    Console.WriteLine("Try once more.");
+                    break;
+                case 4:
+                    Console.WriteLine("Don't give up.");
+                    break;
+                default:
+                    Console.WriteLine("No. Keep trying.");
+                    break;
+
             }
         }
 

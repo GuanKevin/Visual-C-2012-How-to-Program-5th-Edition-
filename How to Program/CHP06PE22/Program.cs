@@ -14,25 +14,25 @@ namespace CHP06PE22
             for (int i = 0; i < 10; i++)
             {
                 for (int j = 0; j <= i; j++)
-                    Console.Write("* ");
+                    Console.Write('*');
 
                 for (int k = 0 + i; k < 10; k++)
-                    Console.Write("  ");
+                    Console.Write(' ');
 
                 for (int l = 10; l > i; l--)
-                    Console.Write("* ");
+                    Console.Write('*');
 
                 for (int m = 0; m <= i; m++)
-                    Console.Write("    ");
-
-                for (int n = 10; n > i; n--)
-                    Console.Write("* ");
-
-                for (int o = 10; o > i; o--)
                     Console.Write("  ");
 
+                for (int n = 10; n > i; n--)
+                    Console.Write('*');
+
+                for (int o = 10; o > i; o--)
+                    Console.Write(" ");
+
                 for (int p = 0; p <= i; p++)
-                    Console.Write("* ");
+                    Console.Write('*');
 
                 Console.WriteLine();
             }

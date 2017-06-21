@@ -25,9 +25,26 @@ namespace CHP07PE33
 
         static void Main(string[] args)
         {
+            int balance = 1000,
+            wager = 0;
+
+            Console.Write("Enter your wager: ");
+            wager = Convert.ToInt32(Console.ReadLine());
+
+            if (wager > balance)
+            {
+                while (true)
+                {
+                    Console.Write("You don't have that balance! " +
+                        "\nEnter your wager again: ");
+                    wager = Convert.ToInt32(Console.ReadLine());
+                }
+            }
+
             Status gameStatus = Status.CONTINUE;
             int myPoint = 0;
             int sumOfDice = RollDice();
+        
 
             switch ((DiceNames) sumOfDice)
             {
@@ -57,9 +74,21 @@ namespace CHP07PE33
             }
 
             if (gameStatus == Status.WON)
+            {
                 Console.WriteLine("Player Wins");
+                Console.WriteLine("You now have a balance of {0}.", (balance += wager));
+            }
             else
-                Console.WriteLine("Player Loses");                
+            {
+                Console.WriteLine("Player Loses");
+
+                balance -= wager;
+
+                Console.WriteLine("You now have a balance of {0}.", (balance));
+
+                if (balance == 0)
+                    Console.WriteLine("You've busted!");
+            }
         }
         public static int RollDice()
         {

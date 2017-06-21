@@ -10,16 +10,15 @@ namespace CHP06PE12
     {
         static void Main(string[] args)
         {
-            int sum = 1;
+            int oddProduct = 1;
 
-            Console.Write("{0}", sum);
+            Console.Write(oddProduct);
             for (int i = 3; i <= 7; i += 2)
             {
-                sum *= i;
                 Console.Write(" * {0}", i);
+                oddProduct *= i;
             }
-
-            Console.WriteLine("\nThe product of Odd Integers from 1 to 7 is {0}.", sum);
+            Console.WriteLine(" = {0}.", oddProduct);
         }
     }
 }

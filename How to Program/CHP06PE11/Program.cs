@@ -11,18 +11,21 @@ namespace CHP06PE11
     {
         static void Main(string[] args)
         {
-            int counter = Convert.ToInt32(Console.ReadLine());
-            int smallestNumber = Convert.ToInt32(Console.ReadLine());
-            int temp;
+            Console.Write("Enter the number of values to input: ");
+            int size = Convert.ToInt32(Console.ReadLine());
+            int smallestNum = int.MaxValue;
 
-            for (int i = 1; i < counter; i++)
+
+            for (int i = 0; i < size; i++)
             {
-                temp = Convert.ToInt32(Console.ReadLine());
-                if (temp < smallestNumber)
-                    smallestNumber = temp;
+                Console.Write("Enter number {0}: ", i);
+                int tempNum = Convert.ToInt32(Console.ReadLine());
+
+                if (smallestNum > tempNum)
+                    smallestNum = tempNum;
             }
 
-            Console.WriteLine("The smallest number entered is {0}.", smallestNumber);
+            Console.WriteLine("The smallest number is {0}.", smallestNum);
         }
     }
 }

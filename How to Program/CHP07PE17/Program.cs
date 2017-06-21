@@ -12,27 +12,23 @@ namespace CHP07PE17
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter a number (negative number to quit!): ");
-            int number = Convert.ToInt32(Console.ReadLine());
+            Random randNum = new Random();
 
-            while (number > 0)
+            for (int i = 0; i < 10; i++)
             {
-                if (IsEven(number))
-                    Console.WriteLine("{0} is even!", number);
+                int num = randNum.Next(1001);
+                if (IsEven(num))
+                    Console.WriteLine(num + " is even!");
                 else
-                    Console.WriteLine("{0} is odd!", number);
-
-                Console.Write("Enter a number (negative number to quit!): ");
-                number = Convert.ToInt32(Console.ReadLine());
+                    Console.WriteLine(num + " is odd!");
             }
-        }
-
+        }    
+        
         public static Boolean IsEven(int number)
         {
             if (number % 2 == 0)
                 return true;
-            else
-                return false;
+            return false;
         }
     }
 }

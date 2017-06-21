@@ -17,10 +17,8 @@ namespace CHP06PE25
         {
             int count;
 
-            for (count = 1; count <= 10; ++count)
+            for (count = 1; count <= 4; ++count)
             {
-                if (count == 5)
-                    break;
                 Console.Write("{0} ", count);
             }
             Console.WriteLine("Broke out of loop when it ended!");

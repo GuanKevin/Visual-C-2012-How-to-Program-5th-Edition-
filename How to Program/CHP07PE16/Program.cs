@@ -13,20 +13,15 @@ namespace CHP07PE16
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter the first number: ");
-            int number1 = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter the second number: ");
-            int number2 = Convert.ToInt32(Console.ReadLine());
-
-            if (Multiple(number1, number2))
-                Console.WriteLine("{0} is a multiple of {1}!", number2, number1);
+            if (Multiples(21, 7))
+                Console.WriteLine("We got a multiple!");
             else
-                Console.WriteLine("{0} is not a multiple of {1}!", number2, number1);
+                Console.WriteLine("We don't have a multiple!");
         }
 
-        public static Boolean Multiple(int number1, int number2)
+        public static Boolean Multiples(int num1, int num2)
         {
-            if ((number1 % number2) == 0)
+            if (num1 % num2 == 0)
                 return true;
             else
                 return false;

@@ -16,26 +16,48 @@ namespace CHP07PE30
     {
         static void Main(string[] args)
         {
-            GuessTheNumber();
+            Boolean keepPlaying = true;
+            do
+            {
+                keepPlaying = new Program().GuessNumber();
+                Console.ReadLine();
+            } while (keepPlaying);
         }
 
-        public static void GuessTheNumber()
+        public Boolean GuessNumber()
         {
-            Random randomNumber = new Random();
-            int number = randomNumber.Next(1, 1001);
-            int guessCounter = 0;
+            Console.WriteLine("Guess the number between 1 to 100!");
+            Random randNum = new Random();
+            int number = randNum.Next(1, 101),
+                guess;
+            Boolean userGuess = false;
 
-            Console.Write("Enter your guess: ");
-            int userGuess = Convert.ToInt32(Console.ReadLine());
-
-            while (number != userGuess)
+            while (!userGuess)
             {
-                guessCounter++;
-                Console.Write("Try a {0} number: ", (number > userGuess) ? "larger" : "smaller");                
-                userGuess = Convert.ToInt32(Console.ReadLine());
-            }
+                Console.Write("Enter guess: ");
+                guess = Convert.ToInt32(Console.ReadLine());
 
-            Console.WriteLine("You've got it in {0} tries!", guessCounter);
+                // If the player's guess is incorrect, your app should display 
+                // Too high.
+                // or Too low.
+
+                if (guess > number)
+                    Console.Write("Too high. ");
+                else if (guess < number)
+                    Console.Write("Too low. ");
+                else
+                {
+                    Console.WriteLine("Congratulations. You guessed the number!");
+                    userGuess = true;
+                    Console.Write("Would you like to play again (Y|N): ");
+
+                    if (char.ToLower(Convert.ToChar(Console.Read())) == 'y')                   
+                        return true;
+                    else
+                        return false;
+                }
+            }
+            return false;
         }
     }
 }

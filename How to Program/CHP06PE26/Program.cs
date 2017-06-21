@@ -9,19 +9,17 @@ namespace CHP06PE26
     class Program
     {
         static void Main(string[] args)
-        {
-            /**
-                for ( int i = 1; i <= 5; ++i )
-                {
+        {             
+            for ( int i = 1; i <= 5; ++i )
+            {
                 for ( int j = 1; j <= 3; ++j )
                 {
-                for ( int k = 1; k <= 4; ++k )
-                Console.Write( '*' );
+                    for ( int k = 1; k <= 4; ++k )
+                        Console.Write( '*' );
+                    Console.WriteLine();
+                } 
                 Console.WriteLine();
-                } // end middle for
-                Console.WriteLine();
-                } // end outer for
-            */
+            }             
         }
     }
 }

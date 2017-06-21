@@ -15,22 +15,18 @@ namespace CHP07PE08
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter hours parked: ");
-            decimal hoursParked = Convert.ToDecimal(Console.ReadLine());
-            Console.WriteLine("Parking for {0} hours will cost {1:C}.", hoursParked, CalculateCharges(hoursParked));
+            Console.WriteLine(CalculateCharges(3.5));
         }
 
-        public static decimal CalculateCharges(decimal hoursParked)
+        public static decimal CalculateCharges(double hour)
         {
-            if (hoursParked <= 3)
+            if (hour <= 3)
                 return 2M;
-            else if (hoursParked >= 24)
+            else if (hour >= 24)
                 return 10M;
             else
             {
-                hoursParked -= 3;
-                hoursParked = Math.Ceiling(hoursParked);
-                return 2M + (hoursParked / 2);
+                return 2M + (decimal) Math.Ceiling((hour - 3.0)) / 2;
             }
         }
     }

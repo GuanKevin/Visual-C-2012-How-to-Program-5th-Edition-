@@ -14,20 +14,15 @@ namespace CHP07PE35
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter the base number: ");
-            int baseNumber = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Enter the power: ");
-            int power = Convert.ToInt32(Console.ReadLine());
-
-            Console.WriteLine("{0} to the power of {1} is {2}.", baseNumber, power, Power(baseNumber, power));
+            Console.WriteLine("Doing recursion: {0}", Power(4, 3));
         }
 
-        public static double Power(int baseNumber, int exponent)
+        public static double Power(int baseNum, int exponent)
         {
             if (exponent == 1)
-                return baseNumber;
+                return baseNum;
 
-            return baseNumber * Power(baseNumber, --exponent);
+            return baseNum * Power(baseNum, exponent - 1);
         }
     }
 }

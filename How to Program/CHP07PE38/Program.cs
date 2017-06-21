@@ -10,6 +10,7 @@ namespace CHP07PE38
     {
         static void Main(string[] args)
         {
+            Console.WriteLine(Sum(5));
         }
 
         public static int Sum(int n)
@@ -17,7 +18,7 @@ namespace CHP07PE38
             if (n == 0)
                 return 0;
             else
-                return n + Sum(n);
+                return n + Sum(--n);
         }
     }
 }

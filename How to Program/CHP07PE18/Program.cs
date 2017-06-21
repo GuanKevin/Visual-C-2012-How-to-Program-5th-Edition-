@@ -15,16 +15,17 @@ namespace CHP07PE18
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter a number: ");
-            SquareOfAsterisks(Convert.ToInt32(Console.ReadLine()));
+            new Program().SquareOfAsterisks(10);
         }
 
-        public static void SquareOfAsterisks(int number)
+        public void SquareOfAsterisks(int side)
         {
-            for (int i = 0; i < number; i++)
+            for (int i = 0; i < side; i++)
             {
-                for (int j = 0; j < number; j++)
-                    Console.Write("* ");
+                for (int j = 0; j < side; j++)
+                {
+                    Console.Write('*');
+                }
                 Console.WriteLine();
             }
         }

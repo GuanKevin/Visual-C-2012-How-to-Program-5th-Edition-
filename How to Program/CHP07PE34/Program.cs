@@ -9,26 +9,26 @@ namespace CHP07PE34
 {
     class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Decimal\tBinary\tOctal\tHexadecimal");
-            
-            for (int i = 1; i <= 256; i++)
+            for (int i = 1; i < 20; i++)
             {
-                Console.Write("{0}", i);
-                Console.Write("{0,10}", DecimalToBinary(i));
-                Console.Write("{0,10}", DecimalToOctal(i));
-                Console.WriteLine("{0,10}", DecimalToHexadecimal(i));
+                Console.Write(i);
+                Console.Write("\t" + DecimalToBinary(i));
+                Console.Write("\t" + DecimalToOctal(i));
+                Console.Write("\t" + DecimalToHexadecimal(i));
+                Console.WriteLine();
             }
         }
 
-        public static string DecimalToHexadecimal(int number)
+        public static String DecimalToHexadecimal(int number)
         {
             String hexadecimal = "";
 
             while (number != 0)
             {
-                if ((number % 16) < 10)
+                if (number % 16 < 10)
                     hexadecimal = (number % 16) + hexadecimal;
                 else
                 {
@@ -54,10 +54,8 @@ namespace CHP07PE34
                             break;
                     }
                 }
-
                 number /= 16;
             }
-
             return hexadecimal;
         }
 
@@ -86,9 +84,7 @@ namespace CHP07PE34
                     number -= (int)Math.Pow(2, i);
                 }
                 else
-                {
                     binary += 0;
-                }
             }
 
             return int.Parse(binary);

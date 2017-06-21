@@ -14,32 +14,37 @@ namespace CHP06PE24
             Console.Write("Enter a number between 1 - 19: ");
             int size = Convert.ToInt32(Console.ReadLine());
 
-            for (int i = 0; i < size; i++)
+            if ((size % 2) == 0)
+                Console.WriteLine("It is not an odd number!");
+            else
             {
-                for (int j = i; j < (size - 1); j++)
-                    Console.Write(" ");
+                for (int i = 0; i < size; i++)
+                {
+                    for (int j = i; j < (size - 1); j++)
+                        Console.Write(" ");
 
-                for (int k = 0; k <= i; k++)
-                    Console.Write("*");
+                    for (int k = 0; k <= i; k++)
+                        Console.Write("*");
 
-                for (int l = 1; l <= i; l++)
-                    Console.Write("*");
+                    for (int l = 1; l <= i; l++)
+                        Console.Write("*");
 
-                Console.WriteLine();
-            }
+                    Console.WriteLine();
+                }
 
-            for (int i = 0; i < (size - 1); i++)
-            {
-                for (int j = 0; j <= i; j++)
-                    Console.Write(" ");
+                for (int i = 0; i < (size - 1); i++)
+                {
+                    for (int j = 0; j <= i; j++)
+                        Console.Write(" ");
 
-                for (int k = (size - 1); k > i; k--)
-                    Console.Write("*");
+                    for (int k = (size - 1); k > i; k--)
+                        Console.Write("*");
 
-                for (int l = (size - 2); l > i; l--)
-                    Console.Write("*");
+                    for (int l = (size - 2); l > i; l--)
+                        Console.Write("*");
 
-                Console.WriteLine();
+                    Console.WriteLine();
+                }
             }
         }
     }

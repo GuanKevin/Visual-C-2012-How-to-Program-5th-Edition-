@@ -14,11 +14,13 @@ namespace CHP07PE24
         static void Main(string[] args)
         {
             for (int i = 2; i <= 1000; i++)
-                if (IsPerfectNumber(i))
-                    Console.WriteLine(i + " is a perfect number!");
+            {
+                if (Perfect(i))
+                    Console.WriteLine(" is a perfect number!");
+            }
         }
 
-        public static Boolean IsPerfectNumber(int number)
+        public static Boolean Perfect(int number)
         {
             int sum = 0;
 
@@ -26,8 +28,17 @@ namespace CHP07PE24
                 if (number % i == 0)
                     sum += i;
 
-            if (sum == number)
+            if (number == sum)
+            {
+                Console.Write("1");
+                for (int i = 2; i <= number / 2; i++)
+                {
+                    if (number % i == 0)
+                        Console.Write(" + " + i);
+                }
+                Console.Write(" = " + number);
                 return true;
+            }
 
             return false;
         }

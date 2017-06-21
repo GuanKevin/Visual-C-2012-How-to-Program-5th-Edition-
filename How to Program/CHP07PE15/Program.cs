@@ -13,15 +13,12 @@ namespace CHP07PE15
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter side 1: ");
-            double side1 = Convert.ToDouble(Console.ReadLine());
-            Console.Write("Enter side 2: ");
-            double side2 = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine("The hypotenuse is {0}.", TriangleHypotenuse(side1, side2));
+            double side1 = 3,
+                side2 = 4;
+            Console.WriteLine("The hypotenuse is {0}.", Hypotenuse(side1, side2));
         }
 
-        public static double TriangleHypotenuse(double side1, double side2)
+        public static double Hypotenuse(double side1, double side2)
         {
             return Math.Sqrt(Math.Pow(side1, 2) + Math.Pow(side2, 2));
         }

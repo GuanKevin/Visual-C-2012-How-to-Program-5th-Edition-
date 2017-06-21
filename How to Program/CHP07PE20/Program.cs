@@ -13,7 +13,7 @@ namespace CHP07PE20
         {
             Console.Write("Enter the radius: ");
             double radius = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("The radius of {0} is {1:N2}.", radius, CircleArea(radius));
+            Console.WriteLine("The area of {0} is {1:N2}.", radius, CircleArea(radius));
         }
 
         public static double CircleArea(double radius)

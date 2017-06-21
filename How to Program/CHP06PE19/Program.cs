@@ -17,6 +17,18 @@ namespace CHP06PE19
     {
         static void Main(string[] args)
         {
+            int i = 1,
+                j = 2,
+                k = 3,
+                m = 2;
+
+            Console.WriteLine(i == 1);
+            Console.WriteLine(j == 3);
+            Console.WriteLine((i >= 1) && (j < 4));
+            Console.WriteLine((m <= 99) & (k < m));
+            Console.WriteLine((j >= i) || (k == m));
+            Console.WriteLine((k + m < j) | (3 - j >= k));
+            Console.WriteLine(!(k > m));
         }
     }
 }

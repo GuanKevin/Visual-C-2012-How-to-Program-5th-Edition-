@@ -19,40 +19,43 @@ namespace CHP06PE17
     {
         static void Main(string[] args)
         {
+            decimal sales = 0;
             int productNumber;
-            decimal productOneRetailPrice = 0,
-                productTwoRetailPrice = 0,
-                productThreeRetailPrice = 0;
+            Boolean breakout = false;
 
-
-            Console.Write("Enter product number between 1 to 3 else it will terminate: ");
+            Console.Write("Enter product number 1-3 (Any other to break): ");
             productNumber = Convert.ToInt32(Console.ReadLine());
 
-            while (productNumber >= 0 && productNumber <= 3)
+            while (!breakout)
             {
                 switch (productNumber)
                 {
                     case 1:
-                        productOneRetailPrice += 2.98M;
+                        Console.Write("Enter number sold: ");
+                        sales += (2.98M * Convert.ToInt32(Console.ReadLine()));
                         break;
                     case 2:
-                        productTwoRetailPrice += 4.5M;
+                        Console.Write("Enter number sold: ");
+                        sales += (4.5M * Convert.ToInt32(Console.ReadLine()));
                         break;
                     case 3:
-                        productThreeRetailPrice += 9.98M;
+                        Console.Write("Enter number sold: ");
+                        sales += (9.98M * Convert.ToInt32(Console.ReadLine()));
                         break;
                     default:
+                        Console.WriteLine("Invalid input, ending program!");
+                        breakout = true;
                         break;
                 }
 
-                Console.Write("Enter another product number: ");
-                productNumber = Convert.ToInt32(Console.ReadLine());
+                if (!breakout)
+                {
+                    Console.Write("Enter product number 1-3 (Any other to break): ");
+                    productNumber = Convert.ToInt32(Console.ReadLine());
+                }
             }
 
-            Console.WriteLine("Product{0, 10}", "Sales");
-            Console.WriteLine("1{0, 15:C}", productOneRetailPrice);
-            Console.WriteLine("2{0, 15:C}", productTwoRetailPrice);
-            Console.WriteLine("3{0, 15:C}", productThreeRetailPrice);
+            Console.WriteLine("The total sales was {0:C}.", sales);
         }
     }
 }

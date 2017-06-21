@@ -15,38 +15,29 @@ namespace CHP07PE39
 {
     class Program
     {
-        Random randNumber = new Random();
-
+        Random randNum = new Random();
         static void Main(string[] args)
         {
-            LearnMiltiplication();
-        }
-
-        public static void LearnMiltiplication()
+            Program mulTest = new Program();
+            mulTest.Multiplicaton(mulTest.RandomNumber(), mulTest.RandomNumber());
+        }     
+        
+        public void Multiplicaton(int num1, int num2)
         {
-            Program instance = new Program();
-            int number1 = instance.GetRandomNumber();
-            int number2 = instance.GetRandomNumber();
+            Console.Write("{0} * {1} = ", num1, num2);
+            int solution = Convert.ToInt16(Console.ReadLine());
 
-            Console.Write("{0} x {1} = ", number1, number2);
-            int product = Convert.ToInt32(Console.ReadLine());
-
-            while (true)
+            while (solution != (num1 * num2))
             {
-                if (product != (number1 * number2))
-                {
-                    Console.WriteLine("No. Please try again.");
-                    Console.Write("{0} x {1} = ", number1, number2);
-                    product = Convert.ToInt32(Console.ReadLine());
-                }
-                else
-                    break;
+                Console.Write("Incorrect! Try again!" +
+                    "\n{0} * {1} = ", num1, num2);
+                solution = Convert.ToInt16(Console.ReadLine());
             }
         }
 
-        public int GetRandomNumber()
+        public int RandomNumber()
         {
-            return randNumber.Next(1, 10);
+            return randNum.Next(10);
         }
     }
 }

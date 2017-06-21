@@ -12,21 +12,18 @@ namespace CHP07PE26
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter a digit: ");
-            int digit = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("The reverse of {0} is ", digit);
-            ReverseDigit(digit);
+            Console.WriteLine(ReverseDigit(0123450));
         }
 
-        public static void ReverseDigit(int digit)
+        public static String ReverseDigit(int number)
         {
-            while (digit != 0)
+            String reversed = "";
+            while (number != 0)
             {
-                Console.Write(digit % 10);
-                digit = digit / 10;
+                reversed += number % 10;
+                number /= 10;
             }
-            Console.WriteLine();
+            return (reversed);
         }
     }
 }

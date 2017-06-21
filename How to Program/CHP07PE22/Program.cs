@@ -16,38 +16,38 @@ namespace CHP07PE22
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter C to calculate for celcius." +
-                "\nEnter F to calculate for fahrenheit." +
-                "\nCalculate for: ");
-            char conversion = char.ToLower(Convert.ToChar(Console.Read()));
+            Console.WriteLine("Enter c to convert Celius to Fahrenheit.");
+            Console.WriteLine("Enter f to conver Fahrenheit to Celius.");
+            Console.Write("Enter choice: ");
+            char temp = char.ToLower(Convert.ToChar(Console.Read()));
             Console.ReadLine();
 
-            if (conversion == 'c')
+            switch (temp)
             {
-                Console.Write("Enter the temperature: ");
-                double temperature = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("{0} in celcius to fahrenheit is {1:N2}.", temperature, CelsiusToFahrenheit(temperature));
-            }
-            else if (conversion == 'f')
-            {
-                Console.Write("Enter the temperature: ");
-                double temperature = Convert.ToDouble(Console.ReadLine());
-                Console.WriteLine("{0} in fahrenheit to celcius is {1:N2}.", temperature, FahrenheitToCelcius(temperature));
-            }
-            else
-            {
-                Console.WriteLine("Invalid character entered!");
+                case 'c':
+                    Console.Write("Enter the temperature in celcius: ");
+                    Console.WriteLine("The temperature in fahrenheit after conversion is {0}.", 
+                        CelciusToFahrenheit(Convert.ToDouble(Console.ReadLine())));
+                    break;
+                case 'f':
+                    Console.Write("Enter the temperature in fahrenheit: ");
+                    Console.WriteLine("The temperature in celcius after conversion is {0}.",
+                        FahrenheitToCelcius(Convert.ToDouble(Console.ReadLine())));
+                    break;
+                default:
+                    Console.WriteLine("Invalid character entered, ending program.");
+                    break;
             }
         }
 
-        public static double CelsiusToFahrenheit(double celcius)
+        public static double CelciusToFahrenheit(double c)
         {
-            return 9.0 / 5.0 * celcius + 32;
+            return (9.0 / 5.0) * c + 32;
         }
 
-        public static double FahrenheitToCelcius(double fahrenheit)
+        public static double FahrenheitToCelcius(double f)
         {
-            return 5.0 / 9.0 * (fahrenheit - 32);
+            return (5.0 / 9.0) * (f - 32);
         }
     }
 }

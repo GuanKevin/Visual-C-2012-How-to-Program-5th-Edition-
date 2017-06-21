@@ -10,9 +10,11 @@ namespace CHP07PE37
     {
         static void Main(string[] args)
         {
-
+            Console.WriteLine("Mystery: {0}", Mystery(3, 4));
         }
-
+        // a = 3;
+        // b = 4
+        // 3 + (
         // Parameter b must be positive to prevent infinite recursion
         public static int Mystery(int a, int b)
         {

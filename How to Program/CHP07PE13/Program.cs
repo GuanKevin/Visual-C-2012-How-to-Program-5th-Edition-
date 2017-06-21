@@ -14,13 +14,19 @@ namespace CHP07PE13
     {
         static void Main(string[] args)
         {
-            Random randomNumbers = new Random();
+            Random randNum = new Random();
 
-            for (int i = 0; i < 100; i++)
-                if ((i + 1) % 10 == 0)
-                    Console.WriteLine("{0}\t", ((randomNumbers.Next(1, 6) * 2) + 1) * 2);
-                else
-                    Console.Write("{0}\t", ((randomNumbers.Next(1, 6) * 2) + 1) * 2);
+            for (int i = 1; i <= 10; i++)
+            {
+                for (int j = 1; j <= 10; j++)
+                {
+                    if (j + 1 % 10 == 0)
+                        Console.WriteLine("{0} ", (randNum.Next(1, 6) * 2 + 1) * 2);
+                    else
+                        Console.Write("{0} ", (randNum.Next(1, 6) * 2 + 1) * 2);
+                }
+                Console.WriteLine();
+            }
         }
     }
 }

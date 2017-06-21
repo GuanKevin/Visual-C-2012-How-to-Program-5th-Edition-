@@ -17,12 +17,17 @@ namespace CHP07PE12
     {
         static void Main(string[] args)
         {
-            Random rnd = new Random();
-            for (int i = 0; i < 100; i++)
-                if ((i + 1) % 10 == 0)
-                    Console.WriteLine("{0}\t", rnd.Next(-3, 11));            
-                else
-                    Console.Write("{0}\t", rnd.Next(-3, 11));
+            Random randomNumbers = new Random();
+
+            for (int i = 0; i < 10; i++)
+            {
+                for (int j = 0; j < 10; j++)
+                    if (j + 1 % 10 == 0)
+                        Console.WriteLine("{0} ", randomNumbers.Next(-3, 12));
+                    else
+                        Console.Write("{0} ", randomNumbers.Next(-3, 12));
+                Console.WriteLine();
+            }
         }
     }
 }

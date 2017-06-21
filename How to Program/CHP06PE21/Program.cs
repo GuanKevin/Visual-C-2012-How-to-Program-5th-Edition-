@@ -16,15 +16,16 @@ namespace CHP06PE21
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Side1{0, 10}{1, 10}", "Side2", "Side3");
+            Console.WriteLine("Side1\tSide2\tHypotenuse");
+
             for (int i = 1; i <= 100; i++)
             {
-                for (int j = 1; j <= 100; j++)
+                for (int j = i; j <= 100; j++)
                 {
                     for (int k = i; k <= 100; k++)
                     {
-                        if ((Math.Pow(i, 2) + (Math.Pow(j, 2)) == Math.Pow(k, 2)))
-                            Console.WriteLine("{0}{1, 14}{2, 10}", i, j, k);
+                        if ((Math.Pow(i, 2) + Math.Pow(j, 2)) == Math.Pow(k, 2))
+                            Console.WriteLine("{0}\t{1}\t{2}", i, j, k);
                     }
                 }
             }

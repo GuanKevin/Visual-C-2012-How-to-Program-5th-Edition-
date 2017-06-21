@@ -15,9 +15,10 @@ namespace CHP06PE16
             for (int i = 0; i < 3; i++)
             {
                 Console.Write("Enter a number: ");
-                int length = Convert.ToInt32(Console.ReadLine());
-                for (int j = 0; j < length; j++)
-                    Console.Write("*");
+                int number = Convert.ToInt32(Console.ReadLine());
+
+                for (int j = 0; j < number; j++)
+                    Console.Write('*');
                 Console.WriteLine();
             }
         }
