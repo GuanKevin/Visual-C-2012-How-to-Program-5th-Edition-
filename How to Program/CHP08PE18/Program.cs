@@ -14,6 +14,43 @@ namespace CHP08PE18
     {
         static void Main(string[] args)
         {
+            // Position [0] stores all wins
+            // Position [1] stores all loses
+            byte[,] jaggedArrayForCraps = new byte[2, 22];
+
+            Craps playCraps;
+
+            for (int i = 0; i < 1000; i++)
+            {
+                playCraps = new Craps();
+
+                // Player wins
+                if ((int) playCraps.GameResult() == 1)
+                {
+                    // Games won after the 20th roll
+                    if (playCraps.GetRunsCounter() > 20)
+                        jaggedArrayForCraps[0, 21]++;
+                    // Games won between the 1st to 20th roll
+                    else
+                        jaggedArrayForCraps[0, playCraps.GetRunsCounter()]++;
+                }
+                // Player loses
+                else
+                {
+                    // Games won after the 20th roll
+                    if (playCraps.GetRunsCounter() > 20)
+                        jaggedArrayForCraps[1, 21]++;
+                    // Games won between the 1st to 20th roll
+                    else
+                        jaggedArrayForCraps[1, playCraps.GetRunsCounter()]++;
+                }
+            }
+
+            Console.WriteLine("Runs{0, 8}{1, 10}", "Wins", "Lose");
+            for (int i = 1; i <= 21; i++)
+            {
+                Console.WriteLine(i + "{0, 10}{1, 10}", jaggedArrayForCraps[0, i], jaggedArrayForCraps[1, i]);
+            }
         }
     }
 }

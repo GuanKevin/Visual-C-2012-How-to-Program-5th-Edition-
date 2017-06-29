@@ -19,6 +19,88 @@ namespace CHP08PE19
     {
         static void Main(string[] args)
         {
+            bool[] airlineReservationSystemArray = new bool[10];
+            Console.WriteLine("Please type 1 for First Class and Please type 2 for Economy");
+            byte assignSeats;
+
+            while (SeatsAvailable(airlineReservationSystemArray))
+            {
+                Console.Write("Assign to: ");
+                assignSeats = Convert.ToByte(Console.ReadLine());
+
+                if (assignSeats == 1)
+                {
+                    // Assign the passenger to the next available first class seat
+                    if (SeatsAvailable(airlineReservationSystemArray, 0, 5))                    
+                        AssignSeats(airlineReservationSystemArray, 0, 5);
+                    else
+                    {
+                        Console.Write("Is it acceptable to be placed in economy section [Y/N]: ");
+                        char input = char.ToUpper(Convert.ToChar(Console.Read()));
+
+                        if (input == 'Y')
+                            AssignSeats(airlineReservationSystemArray, 5, 10);
+                        else
+                            Console.WriteLine("Next flight leaves in 3 hours.");
+                        Console.ReadLine();
+                    }
+                }
+                else
+                {
+                    // Assign the passenger to the next available economy seat
+                    if (SeatsAvailable(airlineReservationSystemArray, 5, 10))
+                        AssignSeats(airlineReservationSystemArray, 5, 10);
+                    else
+                    {
+                        Console.Write("Is it acceptable to be placed in first class section [Y/N]: ");
+                        char input = char.ToUpper(Convert.ToChar(Console.Read()));
+
+                        if (input == 'Y')
+                            AssignSeats(airlineReservationSystemArray, 0, 5);
+                        else
+                            Console.WriteLine("Next flight leaves in 3 hours.");
+                        Console.ReadLine();
+                    }
+                }
+
+                DisplayPlaneSeats(airlineReservationSystemArray);
+            }
+            Console.WriteLine("Next flight leaves in 3 hours.");
+        }
+
+        public static void DisplayPlaneSeats(bool[] airlineReservationSystemArray)
+        {
+            for (int i = 0; i < airlineReservationSystemArray.Length; i++)
+            {
+                if ((i + 1) % 2 == 0)
+                    Console.WriteLine("[{0}]", (airlineReservationSystemArray[i] ? "*" : " "));
+                else
+                    Console.Write("[{0}]", (airlineReservationSystemArray[i] ? "*" : " "));
+            }
+        }
+
+        public static void AssignSeats(bool[] airlineReservationSystemArray, int start, int end)
+        {
+            for (int i = start; i < end; i++)
+            {
+                if (airlineReservationSystemArray[i] == false)
+                {
+                    airlineReservationSystemArray[i] = true;
+                    return;
+                }
+            }
+        }
+
+        /**
+         * Checks if there are seats still available on the plane
+         */ 
+        public static bool SeatsAvailable(bool[] airlineReversationSystemArray, int start = 0, int end = 10)
+        {
+            for (int i = start; i < end; i++)
+                if (airlineReversationSystemArray[i] == false)
+                    return true;
+
+            return false;
         }
     }
 }

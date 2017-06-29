@@ -1,0 +1,6 @@
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE19\bin\Debug\CHP08PE19.exe.config
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE19\bin\Debug\CHP08PE19.exe
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE19\bin\Debug\CHP08PE19.pdb
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE19\obj\Debug\CHP08PE19.csprojResolveAssemblyReference.cache
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE19\obj\Debug\CHP08PE19.exe
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE19\obj\Debug\CHP08PE19.pdb
