@@ -12,6 +12,7 @@ namespace CHP08PE28
     {
         static void Main(string[] args)
         {
+            new TortoiseVsHareSimulation().StartRace();
         }
     }
 }

@@ -22,6 +22,39 @@ namespace CHP08PE20
     {
         static void Main(string[] args)
         {
+            double[,] recArray = { { 100, 200, 300},
+                                    { 100, 200, 300 },
+                                      { 100, 200, 300 },
+                                        { 100, 200, 300 },
+                                          { 100, 200, 300 } };
+
+            Console.WriteLine("{0}{1,10}{2,10}{3,10}{4,10}", "Sales","0001","0002","0003", "Total");
+            for (int i = 0; i < recArray.GetLength(0); i++)
+            {
+                Console.Write("    ");
+                double sum = 0;
+                for (int j = 0; j < recArray.GetLength(1); j++)
+                {
+                    Console.Write("{0, 10}", recArray[i, j]);
+                    
+                    sum += recArray[i, j];
+                }
+
+                Console.WriteLine("{0,10}", sum);
+            }
+
+            Console.Write("Total");
+
+            for (int i = 0; i < recArray.GetLength(1); i++)
+            {
+                double sum = 0;
+                for (int j = 0; j < recArray.GetLength(0); j++)
+                {
+                    sum += recArray[j, i];
+                }
+                Console.Write("{0,10}", sum);
+            }
+            Console.WriteLine();
         }
     }
 }

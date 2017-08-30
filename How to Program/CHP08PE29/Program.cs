@@ -19,6 +19,10 @@ namespace CHP08PE29
     {
         static void Main(string[] args)
         {
+            DeckOfCards myDeckOfCards = new DeckOfCards();
+            myDeckOfCards.Shuffle();
+
+            myDeckOfCards.Deal5Cards();
         }
     }
 }
