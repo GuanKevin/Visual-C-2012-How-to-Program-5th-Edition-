@@ -4,19 +4,17 @@ public class SalesCommission
 {
     private int[] commissions;
 
-    public int[] Commissions { get => commissions; set => commissions = value; }
+    public SalesCommission()
+    {
 
-    public SalesCommission() { }
+    }
 
     public SalesCommission(int[] commissions)
     {
         Commissions = commissions;
     }
 
-    private void DisplayMessage()
-    {
-        Console.WriteLine("Lets see how much each employee made!");
-    }
+    public int[] Commissions { get => commissions; set => commissions = value; }
 
     public void ProcessSalesCommission()
     {
@@ -24,10 +22,13 @@ public class SalesCommission
         ProcessBarChart();
     }
 
-    private void ProcessBarChart()
+    private void DisplayMessage()
     {
-        Console.WriteLine("Sales distribution:");
+        Console.WriteLine("Getting sales commission data!");
+    }
 
+    public void ProcessBarChart()
+    {
         int[] frequency = new int[11];
 
         foreach (int commission in Commissions)
@@ -50,5 +51,7 @@ public class SalesCommission
 
             Console.WriteLine();
         }
+
     }
+
 }

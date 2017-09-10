@@ -10,3 +10,4 @@ C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Progra
 C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE10\obj\Debug\CHP08PE10.csprojResolveAssemblyReference.cache
 C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE10\obj\Debug\CHP08PE10.exe
 C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE10\obj\Debug\CHP08PE10.pdb
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE10\obj\Debug\CHP08PE10.csproj.CoreCompileInputs.cache

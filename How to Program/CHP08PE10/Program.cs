@@ -31,6 +31,7 @@ namespace CHP08PE10
 
             SalesCommission sc = new SalesCommission(commissions);
             sc.ProcessSalesCommission();
+
         }
     }
 }

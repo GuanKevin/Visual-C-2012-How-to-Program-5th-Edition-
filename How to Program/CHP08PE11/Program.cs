@@ -13,16 +13,34 @@ namespace CHP08PE11
     {
         static void Main(string[] args)
         {
-            int[] bestScores = new int[10];
+            // Display the five values of integer array bestScores in column format.
+            int[] bestScores = new int[5];
+
+            for (int i = 0; i < bestScores.Length; i++)
+                Console.WriteLine(i + ": " + bestScores[i]);
+
+            // Add 1 to each of the four elements of integer array bonus. 
+            /*
+            int[] bonus = new int[4];
+
+            for (int i = 0; i < bonus.Length; i++)
+                bonus[i] = 1;
+
+            for (int i = 0; i < bonus.Length; i++)
+                Console.WriteLine(i + ": " + bonus[i]);
+
+            // Set the three elements of integer array counts to 0.      
+             * int[] array = { 0, 0, 0 };
+
+            for (int i = 0; i < array.Length; i++)
+                Console.WriteLine(i + ": " + array[i]);
 
             for (int i = 0; i < 3; i++)
-                bestScores[i] = 0;
+                array[i] = 0;
 
-            for (int i = 0; i < 4; i++)
-                ++bestScores[i];
-
-            for (int i = 0; i < 5; i++)
-                Console.WriteLine(bestScores[i]);
+            for (int i = 0; i < array.Length; i++)
+                Console.WriteLine(i + ": " + array[i]);
+                */
         }
     }
 }
