@@ -4,9 +4,8 @@
  * 8.12 (Duplicate Elimination) 
  * Use a one-dimensional array to solve the following problem: 
  * Write an app that inputs five numbers, each of which is between 10 and 100, inclusive. As each number is read, display it 
- * only if it’s not a duplicate of a number already read. Provide for the “worst case,” in which all five numbers are different. 
- * Use the smallest possible array to solve this problem. Display the complete set of unique values input after the user inputs 
- * each new value.
+ * only if it’s not a duplicate of a number already read. Use the smallest possible array to solve this problem. 
+ * Display the complete set of unique values input after the user inputs each new value.
  */ 
 namespace CHP08PE12
 {
@@ -14,39 +13,44 @@ namespace CHP08PE12
     {
         static void Main(string[] args)
         {
-            const int ARRAY_SIZE = 5;
-            int[] noDuplicateArray = new int[ARRAY_SIZE];
+            const int SIZE = 5;
+            int[] nonDuplicateArr = new int[SIZE];
 
-            for (int arrayIndex = 0; arrayIndex < noDuplicateArray.Length; arrayIndex++)
+            requestFiveNonDuplicateIntegers(nonDuplicateArr);
+
+            foreach (int number in nonDuplicateArr)
+                Console.Write(number + " ");
+        }
+
+        public static void requestFiveNonDuplicateIntegers(int[] nonDuplicateArr)
+        {
+            int nonDuplicateCounter = 0, input;
+
+            Console.WriteLine("Enter a number between 10 to 100: ");
+
+            while (nonDuplicateCounter != 5)
             {
-                int number;
+                Console.Write("Number {0}: ", (nonDuplicateCounter + 1));
+                input = Convert.ToInt32(Console.ReadLine());
 
-                do
+                while (input < 10 | input > 100)
                 {
-                    Console.Write("Enter a number between 10 - 100: ");
-                    number = Convert.ToInt32(Console.ReadLine());
-                } while (!CheckForDuplicates(noDuplicateArray, number, arrayIndex));
+                    Console.WriteLine("Number has to be between 10 to 100! Try again!");
+                    Console.Write("Number {0}: ", (nonDuplicateCounter + 1));
+                    input = Convert.ToInt32(Console.ReadLine());
+                }
 
-                noDuplicateArray[arrayIndex] = number;
-                Console.WriteLine("You've entered {0}.", number);
+                if (nonDuplicateCounter == 0 | checkForDuplicateInArray(input, nonDuplicateArr))
+                    nonDuplicateArr[nonDuplicateCounter++] = input;
+                else
+                    Console.WriteLine("Duplicate found! Enter another number!");
             }
-
-            DisplayInput(noDuplicateArray);
         }
 
-        public static void DisplayInput(int[] noDuplicateArray)
+        public static Boolean checkForDuplicateInArray(int input, int[] nonDuplicateArr)
         {
-            Console.Write("Display all non duplicate numbers: ");
-            for (int index = 0; index < noDuplicateArray.Length; index++)
-                Console.Write("{0} ", noDuplicateArray[index]);
-
-            Console.WriteLine();
-        }
-
-        public static Boolean CheckForDuplicates(int[] noDuplicateArray, int number, int arrayIndex)
-        {
-            for (int index = 0; index <= arrayIndex; index++)
-                if (noDuplicateArray[index] == number)
+            for (int i = 0; i < nonDuplicateArr.Length; i++)
+                if (nonDuplicateArr[i] == input)
                     return false;
 
             return true;
