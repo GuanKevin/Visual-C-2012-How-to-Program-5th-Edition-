@@ -8,51 +8,59 @@
 namespace CHP08PE14
 {
     class Program
-    {
+    {   
         static void Main(string[] args)
         {
-            Boolean continueArraySeries;
+            CalculateSeriesOfIntegers();
+        }
 
+        public static void CalculateSeriesOfIntegers()
+        {
+            Boolean calculateAgain;
+            // Use a loop to ask the user to input all the numbers in an array
             do
             {
-                Console.Write("Enter size of array: ");
-                int arraySize = Convert.ToInt32(Console.ReadLine());
-                int[] myArray = new int[arraySize];
+                // Ask the user for the size of the list of integers
+                Console.Write("Enter size of list: ");
+                int size = Convert.ToInt32(Console.ReadLine());
+                int[] productArray = new int[size];
 
-                for (int arrayIndex = 0; arrayIndex < myArray.Length; arrayIndex++)
+                // Use a loop to store the list of numbers that the user will input
+                for (int index = 0; index < size; index++)
                 {
-                    Console.Write("Enter number {0}: ", arrayIndex + 1);
-                    myArray[arrayIndex] = Convert.ToInt32(Console.ReadLine());
+                    Console.Write("Enter number {0}: ", index + 1);
+                    productArray[index] = Convert.ToInt32(Console.ReadLine());
                 }
 
-                Console.WriteLine("Caculating product...");
-                int arraySeriesProduct = 1;
+                // Call another method to get the product
+                int product = CalculateSeries(productArray);
 
-                for (int arrayIndex = 0; arrayIndex < myArray.Length; arrayIndex++)
-                {
-                    Console.Write(myArray[arrayIndex]);
+                Console.WriteLine("The product is {0}.", product);
 
-                    if (myArray.Length - 1 != arrayIndex)
-                        Console.Write(" * ");
+                // Check if user want to calculate the series again
+                Console.Write("Do you want to calculate again (y|n): ");
+                char again = Console.ReadKey().KeyChar;
+                Console.ReadLine();
 
-                    arraySeriesProduct *= myArray[arrayIndex];
-                }
-
-                Console.WriteLine(" = {0}", arraySeriesProduct);
-                Console.Write("Test another series (Y|N): ");
-
-                if (char.ToLower(Convert.ToChar(Console.Read())) == 'y')
-                {
-                    continueArraySeries = true;
-                    Console.ReadLine();
-                }
+                if (again == 'y' || again == 'Y')
+                    calculateAgain = true;
                 else
-                {
-                    continueArraySeries = false;
-                    Console.WriteLine("Ending calculations...");
-                }
+                    calculateAgain = false;
 
-            } while (continueArraySeries);
+            } while (calculateAgain);
+        }
+
+        public static int CalculateSeries(int[] productArray)
+        {
+            if (productArray.Length == 0)
+                return 0;
+
+            int result = 1;
+
+            for (int index = 0; index < productArray.Length; index++)
+                result *= productArray[index];
+
+            return result;
         }
     }
 }
