@@ -27,7 +27,7 @@ namespace CHP08PE15
 
             for (int i = 0; i < commandLineArray.Length; i++)
             {
-                Console.WriteLine("{0, -4}{1}", i, commandLineArray[i]);
+                Console.WriteLine("{0, -5}{1}", i, commandLineArray[i]);
             }
         }
     }
