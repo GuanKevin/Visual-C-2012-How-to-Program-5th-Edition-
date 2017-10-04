@@ -3,3 +3,10 @@ C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP08PE15\bi
 C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP08PE15\bin\Debug\CHP08PE15.pdb
 C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP08PE15\obj\Debug\CHP08PE15.exe
 C:\Users\kevgu\documents\visual studio 2017\Projects\How to Program\CHP08PE15\obj\Debug\CHP08PE15.pdb
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE15\bin\Debug\CHP08PE15.exe.config
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE15\bin\Debug\CHP08PE15.exe
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE15\bin\Debug\CHP08PE15.pdb
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE15\obj\Debug\CHP08PE15.csprojResolveAssemblyReference.cache
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE15\obj\Debug\CHP08PE15.csproj.CoreCompileInputs.cache
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE15\obj\Debug\CHP08PE15.exe
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE15\obj\Debug\CHP08PE15.pdb

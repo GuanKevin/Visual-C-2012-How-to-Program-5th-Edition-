@@ -1,0 +1,10 @@
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE31\bin\Debug\netcoreapp1.1\CHP08PE31.deps.json
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE31\bin\Debug\netcoreapp1.1\CHP08PE31.runtimeconfig.json
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE31\bin\Debug\netcoreapp1.1\CHP08PE31.runtimeconfig.dev.json
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE31\bin\Debug\netcoreapp1.1\CHP08PE31.dll
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE31\bin\Debug\netcoreapp1.1\CHP08PE31.pdb
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE31\obj\Debug\netcoreapp1.1\CHP08PE31.csprojResolveAssemblyReference.cache
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE31\obj\Debug\netcoreapp1.1\CHP08PE31.csproj.CoreCompileInputs.cache
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE31\obj\Debug\netcoreapp1.1\CHP08PE31.AssemblyInfo.cs
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE31\obj\Debug\netcoreapp1.1\CHP08PE31.dll
+C:\Users\kevgu\Documents\Visual Studio 2017\Projects\Visual-C-2012-How-to-Program-5th-Edition-\How to Program\CHP08PE31\obj\Debug\netcoreapp1.1\CHP08PE31.pdb
