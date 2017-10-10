@@ -18,10 +18,47 @@
  */ 
 namespace CHP08PE21
 {
-    class Program
+    class TurtleGraphics
     {
+        private int[] commands;
+        private String[,] instruction = new String[,] {
+            { "1", "Pen Up" },
+            { "2", "Pen Down" },
+            { "3", "Turn Right" },
+            { "4", "Turn Left" },
+            { "5", "Move forward X spaces" },
+            { "6", "Display Map" },
+            { "9", "End run" }
+        };
+        
+
+        public TurtleGraphics()
+        {
+            commands = new int[] { 2, 5, 3, 5, 3, 5, 3, 5, 1, 6, 9 };
+            DislplayMessage();
+        }
+
+        public TurtleGraphics(int[] commands)
+        {
+            this.commands = commands;
+            DislplayMessage();
+        }
+
+        private void DislplayMessage()
+        {
+            Console.WriteLine("--------------------------------------------------------------");
+            Console.WriteLine("{0, -10}{1, 10}", "Command", "Meaning");
+
+            for (int i = 0; i < instruction.GetLength(0); i++)
+            {
+                Console.WriteLine("{0, -7}{1, 10}", instruction[i, 0], instruction[i, 1]);
+            }
+
+        }
+
         static void Main(string[] args)
         {
+            TurtleGraphics tg = new TurtleGraphics();
         }
     }
 }

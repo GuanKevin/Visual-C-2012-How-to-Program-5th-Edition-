@@ -5,43 +5,64 @@
  * Write an app to simulate the rolling of two dice. The app should use an object of class Random once to roll the first die 
  * and again to roll the second die. The sum of the two values should then be calculated. Each die can show an integer value 
  * from 1 to 6, so the sum of the values will vary from 2 to 12, with 7 being the most frequent sum and 2 and 12 the least 
- * frequent sums. Figure 8.24 shows the 36 possible combinations of the two dice. Your app should roll the dice 36,000 times. 
- * Use a one-dimensional array to tally the number of times each possible sumappears. Display the results in tabular format. 
- * Determine whether the totals are reasonable (e.g., there are six ways to roll a 7, so approximately one-sixth of the rolls 
- * should be 7).
+ * frequent sums. Your app should roll the dice 36,000 times. Use a one-dimensional array to tally the number of times each 
+ * possible sum appears. Display the results in tabular format. 
  */ 
 namespace CHP08PE17
 {
-    class Program
+    class Dice
     {
-        Random randNum = new Random();
+        // Use a one-dimensional array to tally the number of times each possible sum appears.
+        private const int SIZE = 11;
+        // Number of times rolled
+        private const int ROLL = 100000;
+        //  The app should use an object of class Random
+        private Random numberGenerator;
+        private int dice_1;
+        private int dice_2;
+        private int[] tally = new int[SIZE];
+        // INDEX: 0 1 2 3 4 5 6 7 8  9  10
+        // Value: 2 0 0 0 0 1 0 0 0  0  1 = 36000
+        // SUM:   2 3 4 5 6 7 8 9 10 11 12
 
-        static void Main(string[] args)
+        /**
+         * Constructor
+         * Intialize Random object
+         */ 
+        public Dice()
         {
-            Program diceRolling = new Program();
-
-            int[] simulateDiceArray = new int[13];
-            for (int i = 0; i < 36000; i++)
-                ++simulateDiceArray[diceRolling.RollDice()];
-
-            diceRolling.DisplaySimulationResults(simulateDiceArray);
+            numberGenerator = new Random();
+            FrequencyList();
+            DisplayResult();
         }
 
-        public void DisplaySimulationResults(int[] simulateDiceArray)
+        private void DisplayResult()
         {
-            Console.WriteLine("Dice_Sum{0, 10}", "Results");
-            for (int arrayIndex = 2; arrayIndex < simulateDiceArray.Length; arrayIndex++)
-            {
-                Console.WriteLine("{0}{1, 15}", arrayIndex, simulateDiceArray[arrayIndex]);
-            }
+            for (int i = 0; i < tally.Length; i++)
+                Console.WriteLine("{0, -4}{1, 3}", (i + 2), (tally[i]));
         }
 
-        public int RollDice()
+        /**
+         * Return a list with values that are rolled most often
+         * from the sum of two dice
+         */ 
+        private void FrequencyList()
         {
-            int roll1 = randNum.Next(1, 7);
-            int roll2 = randNum.Next(1, 7);
+            for (int i = 0; i < ROLL; i++)            
+                tally[DiceRoll() - 2]++;
+        }
 
-            return (roll1 + roll2);
+        private int DiceRoll()
+        {
+            dice_1 = numberGenerator.Next(6) + 1;
+            dice_2 = numberGenerator.Next(6) + 1;
+
+            return dice_1 + dice_2;
+        }
+
+        public static void Main(String[] args)
+        {
+            Dice dice = new Dice();
         }
     }
 }
