@@ -1,9 +1,11 @@
 ﻿using System;
 
 /**
- * 10.03 (Rectangle Class) Create class Rectangle. The class has attributes length and width, each of which defaults to 1. 
- * It has read-only properties that calculate the Perimeter and the Area of the rectangle. It has properties for both length and width. 
- * The set accessors should verify that length and width are each floating-point numbers greater than 0.0 and less than 20.0.
+ * 10.03 (Rectangle Class) 
+ * Create class Rectangle. The class has attributes length and width, each of which defaults to 1. 
+ * It has read-only properties that calculate the Perimeter and the Area of the rectangle. 
+ * It has properties for both length and width. The set accessors should verify that length and width are each 
+ * floating-point numbers greater than 0.0 and less than 20.0.
  * Write an app to test class Rectangle. 
  */
 namespace CHP10PE03

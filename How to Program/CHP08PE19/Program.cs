@@ -2,105 +2,96 @@
 
 /**
  * 8.19 (Airline Reservations System) 
- * A small airline has just purchased a computer for its new automated reservations system. You have been asked to develop the 
- * new system. You’re to write an app to assign seats on each flight of the airline’s only plane (capacity: 10 seats). Display 
- * the following alternatives: Please type 1 for First Class and Please type 2 for Economy. If the user types 1, your app should 
- * assign a seat in the first-class section (seats 1–5). If the user types 2, your app should assign a seat in the economy 
- * section (seats 6–10). Use a one-dimensional array of type bool to represent the seating chart of the plane. Initialize all 
- * the elements of the array to false to indicate that all the seats are empty. As each seat is assigned, set the corresponding 
- * element of the array to true to indicate that the seat is no longer available. Your app should never assign a seat that has 
- * already been assigned. When the economy section is full, your app should ask the person if it’s acceptable to be placed in 
- * the first-class section (and vice versa). If yes, make the appropriate seat assignment. If no, display the message "Next 
+ * A small airline has just purchased a computer for its new automated reservations system. 
+ * You have been asked to develop the new system. You’re to write an app to assign seats on each flight of the 
+ * airline’s only plane (capacity: 10 seats). Display the following alternatives: 
+ * Please type 1 for First Class and Please type 2 for Economy. 
+ * If the user types 1, your app should assign a seat in the first-class section (seats 1–5). 
+ * If the user types 2, your app should assign a seat in the economy section (seats 6–10). 
+ * Use a one-dimensional array of type bool to represent the seating chart of the plane. 
+ * Initialize all the elements of the array to false to indicate that all the seats are empty. 
+ * As each seat is assigned, set the corresponding element of the array to true to indicate that the seat 
+ * is no longer available. Your app should never assign a seat that has already been assigned. When the economy 
+ * section is full, your app should ask the person if it’s acceptable to be placed in the first-class section (and vice versa). If yes, make the appropriate seat assignment. If no, display the message "Next 
  * flight leaves in 3 hours."
  */ 
 namespace CHP08PE19
 {
-    class Program
+    class AirlineReservationSystem
     {
-        static void Main(string[] args)
+        // Number of available seats
+        private const int CAPACITY = 10;
+        // index 0 for first-class, index 1 for economy class
+        private Boolean[] section = new Boolean[2];
+        private Boolean[] seats;
+
+        public AirlineReservationSystem()
         {
-            bool[] airlineReservationSystemArray = new bool[10];
-            Console.WriteLine("Please type 1 for First Class and Please type 2 for Economy");
-            byte assignSeats;
-
-            while (SeatsAvailable(airlineReservationSystemArray))
-            {
-                Console.Write("Assign to: ");
-                assignSeats = Convert.ToByte(Console.ReadLine());
-
-                if (assignSeats == 1)
-                {
-                    // Assign the passenger to the next available first class seat
-                    if (SeatsAvailable(airlineReservationSystemArray, 0, 5))                    
-                        AssignSeats(airlineReservationSystemArray, 0, 5);
-                    else
-                    {
-                        Console.Write("Is it acceptable to be placed in economy section [Y/N]: ");
-                        char input = char.ToUpper(Convert.ToChar(Console.Read()));
-
-                        if (input == 'Y')
-                            AssignSeats(airlineReservationSystemArray, 5, 10);
-                        else
-                            Console.WriteLine("Next flight leaves in 3 hours.");
-                        Console.ReadLine();
-                    }
-                }
-                else
-                {
-                    // Assign the passenger to the next available economy seat
-                    if (SeatsAvailable(airlineReservationSystemArray, 5, 10))
-                        AssignSeats(airlineReservationSystemArray, 5, 10);
-                    else
-                    {
-                        Console.Write("Is it acceptable to be placed in first class section [Y/N]: ");
-                        char input = char.ToUpper(Convert.ToChar(Console.Read()));
-
-                        if (input == 'Y')
-                            AssignSeats(airlineReservationSystemArray, 0, 5);
-                        else
-                            Console.WriteLine("Next flight leaves in 3 hours.");
-                        Console.ReadLine();
-                    }
-                }
-
-                DisplayPlaneSeats(airlineReservationSystemArray);
-            }
-            Console.WriteLine("Next flight leaves in 3 hours.");
+            seats = new Boolean[CAPACITY];
+            DisplayMessage();
+            ReserveSeats();
         }
 
-        public static void DisplayPlaneSeats(bool[] airlineReservationSystemArray)
+        /**
+         * Choose from a list of available seats
+         */
+        private void ReserveSeats()
         {
-            for (int i = 0; i < airlineReservationSystemArray.Length; i++)
-            {
-                if ((i + 1) % 2 == 0)
-                    Console.WriteLine("[{0}]", (airlineReservationSystemArray[i] ? "*" : " "));
-                else
-                    Console.Write("[{0}]", (airlineReservationSystemArray[i] ? "*" : " "));
-            }
+            DisplayAvailableSeats();
         }
 
-        public static void AssignSeats(bool[] airlineReservationSystemArray, int start, int end)
+        /**
+         * Display a list of available seats
+         * If no seats are available then end program, 
+         * if the requested section seats are unavailable, 
+         * see if user is willing to switch section
+         */ 
+        private void DisplayAvailableSeats()
         {
-            for (int i = start; i < end; i++)
+            bool isAvailable = false;
+            int start = (section[0] == true ? 0 : 5);
+            int capacity = start + 5;
+
+            Console.Write("Available seats: ");
+            for (; start < capacity;)
             {
-                if (airlineReservationSystemArray[i] == false)
+                if (seats[start++] == false)
                 {
-                    airlineReservationSystemArray[i] = true;
-                    return;
+                    Console.Write(start + " ");
+                    isAvailable = true;
                 }
+            }
+
+            Console.WriteLine();
+
+            if (!isAvailable)
+            {
+                Console.WriteLine("Would you like to switch to " + (section[0] == true ? "first-class?" : "economy?"));
+                Console.Write("[Y/N]: ");
+                char userInput = Char.ToUpper(Convert.ToChar(Console.ReadLine()));
+                Console.WriteLine(userInput);
             }
         }
 
         /**
-         * Checks if there are seats still available on the plane
+         * Shows user the options in picking seats
          */ 
-        public static bool SeatsAvailable(bool[] airlineReversationSystemArray, int start = 0, int end = 10)
+        private void DisplayMessage()
         {
-            for (int i = start; i < end; i++)
-                if (airlineReversationSystemArray[i] == false)
-                    return true;
+            Console.WriteLine("-----------------------------------------" +
+                            "\n| Enter 1 to choose a first class seat. |" +
+                            "\n| Enter 2 to choose a econ class seat.  |" +
+                            "\n-----------------------------------------");
 
-            return false;
+            Console.Write("Enter section: ");
+            int section = Convert.ToInt32(Console.ReadLine());
+            this.section[section - 1] = true;
+        }
+
+        public static void Main(String[] args)
+        {
+            AirlineReservationSystem reverseSeat = new AirlineReservationSystem();
+            Console.ReadLine();
         }
     }
 }
